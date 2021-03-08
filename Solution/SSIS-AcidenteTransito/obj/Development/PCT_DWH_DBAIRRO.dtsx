@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2021 10:19:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{C01868E5-18CE-43F1-BB74-409F695C189E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PCT_DWH_DBAIRRO"
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{B04BA256-E002-472C-891C-3AF04C70BE00}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.TCC_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8DFA9E0A-D2B4-4AFE-8E8B-43A8AC3C34A6}"
+      DTS:ObjectName="LocalHost.TCC_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TCC_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Dim DBAIRRO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{72FC36F4-95A0-4D0C-B346-78B1A3E9F376}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Dim DBAIRRO"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8DFA9E0A-D2B4-4AFE-8E8B-43A8AC3C34A6}"
+          SQLTask:SqlStatementSource="merge dBairro Dim&#xA;&#xA;using&#xA;(&#xA;select&#xA;distinct&#xA;stg_log_at.nubairro as 'cdbairro',&#xA;stg_log_at.nmbairro,&#xA;stg_log_at.detpbairro,&#xA;getdate() as 'dtcarga'&#xA;&#xA;from&#x9;tcc_stg.dbo.stg_log_at&#xA;) Query on ( Dim.cdbairro = Query.cdbairro )&#xA;&#xA;when&#x9;matched&#x9;then&#xA;&#x9;update&#xA;&#x9;set&#x9;Dim.cdbairro&#x9;= Query.cdbairro,&#xA;&#x9;&#x9;Dim.nmbairro&#x9;= Query.nmbairro,&#xA;&#x9;&#x9;Dim.detpbairro&#x9;= Query.detpbairro,&#xA;&#x9;&#x9;Dim.dtcarga&#x9;= Query.dtcarga&#xA;&#xA;when&#x9;not matched by target then&#xA;&#x9;insert&#xA;&#x9;(&#xA;&#x9;cdbairro,&#xA;&#x9;nmbairro,&#xA;&#x9;detpbairro,&#xA;&#x9;dtcarga&#xA;&#x9;)&#xA;&#x9;values&#xA;&#x9;(&#xA;&#x9;Query.cdbairro,&#xA;&#x9;Query.nmbairro,&#xA;&#x9;Query.detpbairro,&#xA;&#x9;Query.dtcarga&#xA;&#x9;)&#xA;;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="177.333333333334,42.6666666666667"
+          Id="Package\Carga Dim DBAIRRO"
+          TopLeft="31.3333329483867,29.3333329071602" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

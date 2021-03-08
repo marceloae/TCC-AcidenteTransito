@@ -1,0 +1,1272 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2021 10:48:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{6B7252F3-33C9-44A9-8ECC-F7363AB53293}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PCT_STG_SI_LOG_2018"
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{12AE7ADC-A584-417F-AE74-7BBB258025C5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2EAFC16F-A0B7-4488-B1F8-973CDCF7087A}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TCC_STG;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F36B7A39-DFD6-4EC4-9930-7A63034106C9}"
+      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\marcelo.eugenio\OneDrive\Pessoal\Conhecimento\PUC - Pós BI &amp; Analytics\TCC\Dados\si-log-2018.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUMERO_BOLETIM"
+              DTS:DTSID="{6B089027-28D1-4E5F-BC84-07F0A8970CAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATA_BOLETIM"
+              DTS:DTSID="{CE6473B2-5315-41E0-8A31-5F1F2DBA754E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUMUNICIPIO"
+              DTS:DTSID="{6AE716C2-1214-4335-BD33-32C2EE5D82D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOME_MUNICIPIO"
+              DTS:DTSID="{9D827B7E-F6C0-4A83-926B-609FAEC64A75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEQ_LOGRADOUROS"
+              DTS:DTSID="{61B7BF0C-E806-42F0-AEAB-0A224D7BB335}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUMLOGRADOURO"
+              DTS:DTSID="{D8EE35F5-E7F0-4A28-B9AA-263809DC9773}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TIPO_LOGRADODURO"
+              DTS:DTSID="{A9963A9D-566A-4E16-8000-644C71363E47}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOME_LOGRADODURO"
+              DTS:DTSID="{647937A9-74A0-423E-8430-20E632C111E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TIPO_LOGRADODURO_ANTERIOR"
+              DTS:DTSID="{D49AF55D-B8E7-4901-BFDD-3CF020B59ACA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOME_LOGRADODURO_ANTERIOR"
+              DTS:DTSID="{E6174F17-BF49-491A-88BC-52C416D27D23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUMBAIRRO"
+              DTS:DTSID="{3243AD45-8313-4D18-8615-0119092C716D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOME_BAIRRO"
+              DTS:DTSID="{39634DD9-6A4B-4576-8BB9-E1C96F8942AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TIPO_BAIRRO"
+              DTS:DTSID="{CDE9C7E0-FBBF-4DBB-B881-EBE31976DBAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DESCRICAO_TIPO_BAIRRO"
+              DTS:DTSID="{640FC0F5-D2C5-426E-9E89-0B022D5452B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUMIMOVEL"
+              DTS:DTSID="{949CC049-D3C6-4402-9054-621451346BE3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUM_IMOVEL_PROXIMO"
+              DTS:DTSID="{81A9D739-31E5-40D4-9A0D-21BB2FE858E7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Tabela STG_SI_LOG_2018"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{8DC8F26D-DFDA-4B6F-9ED8-539B6495DCFB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Tabela STG_SI_LOG_2018"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga"
+              componentClassID="Microsoft.Lineage"
+              contactInfo="Auditoria;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Inclui dados sobre o ambiente em que o pacote é executado. Mapeie variáveis de sistema para novas colunas de saída. Por exemplo, adicione o nome do computador e o operador ao fluxo de dados."
+              name="Data Carga">
+              <inputs>
+                <input
+                  refId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga.Inputs[Auditoria Entrada 1]"
+                  name="Auditoria Entrada 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga.Outputs[Auditoria Saída 1]"
+                  exclusionGroup="1"
+                  name="Auditoria Saída 1"
+                  synchronousInputId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga.Inputs[Auditoria Entrada 1]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga.Outputs[Auditoria Saída 1].Columns[DTCARGA]"
+                      dataType="date"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga.Outputs[Auditoria Saída 1].Columns[DTCARGA]"
+                      name="DTCARGA">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica qual item de auditoria é produzido por esta coluna."
+                          name="LineageItemSelected"
+                          typeConverter="LineageItemSelected">4</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem de Arquivo Simples"
+              localeId="1046"
+              name="Importa CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples]"
+                  name="Saída de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMERO_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMERO_BOLETIM]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMERO_BOLETIM]"
+                      name="NUMERO_BOLETIM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[DATA_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[DATA_BOLETIM]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[DATA_BOLETIM]"
+                      name="DATA_BOLETIM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMUNICIPIO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMUNICIPIO]"
+                      name="NUMUNICIPIO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_MUNICIPIO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_MUNICIPIO]"
+                      name="NOME_MUNICIPIO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[SEQ_LOGRADOUROS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SEQ_LOGRADOUROS]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[SEQ_LOGRADOUROS]"
+                      name="SEQ_LOGRADOUROS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMLOGRADOURO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMLOGRADOURO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMLOGRADOURO]"
+                      name="NUMLOGRADOURO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_LOGRADODURO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[TIPO_LOGRADODURO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_LOGRADODURO]"
+                      name="TIPO_LOGRADODURO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_LOGRADODURO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_LOGRADODURO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_LOGRADODURO]"
+                      name="NOME_LOGRADODURO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_LOGRADODURO_ANTERIOR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[TIPO_LOGRADODURO_ANTERIOR]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_LOGRADODURO_ANTERIOR]"
+                      name="TIPO_LOGRADODURO_ANTERIOR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_LOGRADODURO_ANTERIOR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_LOGRADODURO_ANTERIOR]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_LOGRADODURO_ANTERIOR]"
+                      name="NOME_LOGRADODURO_ANTERIOR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMBAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMBAIRRO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMBAIRRO]"
+                      name="NUMBAIRRO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_BAIRRO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_BAIRRO]"
+                      name="NOME_BAIRRO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[TIPO_BAIRRO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_BAIRRO]"
+                      name="TIPO_BAIRRO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[DESCRICAO_TIPO_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[DESCRICAO_TIPO_BAIRRO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[DESCRICAO_TIPO_BAIRRO]"
+                      name="DESCRICAO_TIPO_BAIRRO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMIMOVEL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMIMOVEL]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMIMOVEL]"
+                      name="NUMIMOVEL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUM_IMOVEL_PROXIMO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUM_IMOVEL_PROXIMO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUM_IMOVEL_PROXIMO]"
+                      name="NUM_IMOVEL_PROXIMO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMERO_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMERO_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[DATA_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATA_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME_MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[SEQ_LOGRADOUROS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SEQ_LOGRADOUROS" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMLOGRADOURO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMLOGRADOURO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[TIPO_LOGRADODURO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TIPO_LOGRADODURO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_LOGRADODURO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME_LOGRADODURO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[TIPO_LOGRADODURO_ANTERIOR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TIPO_LOGRADODURO_ANTERIOR" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_LOGRADODURO_ANTERIOR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME_LOGRADODURO_ANTERIOR" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMBAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMBAIRRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NOME_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME_BAIRRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[TIPO_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TIPO_BAIRRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[DESCRICAO_TIPO_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DESCRICAO_TIPO_BAIRRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUMIMOVEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMIMOVEL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[NUM_IMOVEL_PROXIMO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUM_IMOVEL_PROXIMO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Insere CSV - STG_SI_LOG_2018"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[STG_SI_LOG_2018]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NUMERO_BOLETIM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NUMERO_BOLETIM"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMERO_BOLETIM]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMERO_BOLETIM]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[DATA_BOLETIM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DATA_BOLETIM"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[DATA_BOLETIM]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[DATA_BOLETIM]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NUMUNICIPIO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NUMUNICIPIO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMUNICIPIO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMUNICIPIO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NOME_MUNICIPIO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NOME_MUNICIPIO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_MUNICIPIO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_MUNICIPIO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[SEQ_LOGRADOUROS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SEQ_LOGRADOUROS"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[SEQ_LOGRADOUROS]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[SEQ_LOGRADOUROS]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NUMLOGRADOURO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NUMLOGRADOURO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMLOGRADOURO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMLOGRADOURO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[TIPO_LOGRADODURO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TIPO_LOGRADODURO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[TIPO_LOGRADODURO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_LOGRADODURO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NOME_LOGRADODURO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NOME_LOGRADODURO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_LOGRADODURO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_LOGRADODURO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[TIPO_LOGRADODURO_ANTERIOR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TIPO_LOGRADODURO_ANTERIOR"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[TIPO_LOGRADODURO_ANTERIOR]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_LOGRADODURO_ANTERIOR]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NOME_LOGRADODURO_ANTERIOR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NOME_LOGRADODURO_ANTERIOR"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_LOGRADODURO_ANTERIOR]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_LOGRADODURO_ANTERIOR]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NUMBAIRRO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NUMBAIRRO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMBAIRRO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMBAIRRO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NOME_BAIRRO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NOME_BAIRRO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_BAIRRO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NOME_BAIRRO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[TIPO_BAIRRO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TIPO_BAIRRO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[TIPO_BAIRRO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[TIPO_BAIRRO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[DESCRICAO_TIPO_BAIRRO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DESCRICAO_TIPO_BAIRRO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[DESCRICAO_TIPO_BAIRRO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[DESCRICAO_TIPO_BAIRRO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NUMIMOVEL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NUMIMOVEL"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMIMOVEL]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUMIMOVEL]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[NUM_IMOVEL_PROXIMO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NUM_IMOVEL_PROXIMO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUM_IMOVEL_PROXIMO]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[NUM_IMOVEL_PROXIMO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].Columns[DTCARGA]"
+                      cachedDataType="date"
+                      cachedName="DTCARGA"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTCARGA]"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga.Outputs[Auditoria Saída 1].Columns[DTCARGA]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDREG]"
+                      dataType="i4"
+                      name="IDREG" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMERO_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMERO_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[DATA_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATA_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME_MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[SEQ_LOGRADOUROS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SEQ_LOGRADOUROS" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMLOGRADOURO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMLOGRADOURO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[TIPO_LOGRADODURO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TIPO_LOGRADODURO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_LOGRADODURO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME_LOGRADODURO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[TIPO_LOGRADODURO_ANTERIOR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TIPO_LOGRADODURO_ANTERIOR" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_LOGRADODURO_ANTERIOR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME_LOGRADODURO_ANTERIOR" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMBAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMBAIRRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME_BAIRRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[TIPO_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TIPO_BAIRRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[DESCRICAO_TIPO_BAIRRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DESCRICAO_TIPO_BAIRRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUMIMOVEL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMIMOVEL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUM_IMOVEL_PROXIMO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUM_IMOVEL_PROXIMO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTCARGA]"
+                      dataType="dbTimeStamp"
+                      name="DTCARGA" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga Tabela STG_SI_LOG_2018.Paths[Auditoria Saída 1]"
+              endId="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018.Inputs[Entrada de Destino OLE DB]"
+              name="Auditoria Saída 1"
+              startId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga.Outputs[Auditoria Saída 1]" />
+            <path
+              refId="Package\Carga Tabela STG_SI_LOG_2018.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\Carga Tabela STG_SI_LOG_2018\Data Carga.Inputs[Auditoria Entrada 1]"
+              name="Saída de Origem de Arquivo Simples"
+              startId="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV.Outputs[Saída de Origem de Arquivo Simples]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Deleta Tabela STG_SI_LOG_2018"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{BE307BA6-F5DA-4ADA-B46E-49CF9574E72B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Deleta Tabela STG_SI_LOG_2018"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2EAFC16F-A0B7-4488-B1F8-973CDCF7087A}"
+          SQLTask:SqlStatementSource="truncate table STG_SI_LOG_2018" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{0B9FF0DD-0FEB-46F0-B07A-B95E4F56A2D2\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{0B9FF0DD-0FEB-46F0-B07A-B95E4F56A2D2}"
+      DTS:From="Package\Deleta Tabela STG_SI_LOG_2018"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{0B9FF0DD-0FEB-46F0-B07A-B95E4F56A2D2}"
+      DTS:To="Package\Carga Tabela STG_SI_LOG_2018" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="234.666666666667,42.6666666666667"
+          Id="Package\Carga Tabela STG_SI_LOG_2018"
+          TopLeft="5.50000000000001,108.166666666667" />
+        <NodeLayout
+          Size="237.333333333334,42.6666666666667"
+          Id="Package\Deleta Tabela STG_SI_LOG_2018"
+          TopLeft="5.50000000000001,5.50000000000004" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{0B9FF0DD-0FEB-46F0-B07A-B95E4F56A2D2\}]"
+          TopLeft="123.5,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000003"
+              Start="0,0"
+              End="0,52.5000000000003">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000003" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carga Tabela STG_SI_LOG_2018">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="232,42.6666666666667"
+          Id="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018"
+          TopLeft="64.2222213198742,152.533330605825" />
+        <NodeLayout
+          Size="232,42.6666666666667"
+          Id="Package\Carga Tabela STG_SI_LOG_2018\Data Carga"
+          TopLeft="64.2222213198742,82.916665233175" />
+        <NodeLayout
+          Size="232,42.6666666666667"
+          Id="Package\Carga Tabela STG_SI_LOG_2018\Importa CSV"
+          TopLeft="64.2222213198742,13.2999998605252" />
+        <EdgeLayout
+          Id="Package\Carga Tabela STG_SI_LOG_2018.Paths[Auditoria Saída 1]"
+          TopLeft="180.222221319874,125.583331899842">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.9499987059833"
+              Start="0,0"
+              End="0,19.4499987059833">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4499987059833" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Tabela STG_SI_LOG_2018.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="180.222221319874,55.9666665271919">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.9499987059831"
+              Start="0,0"
+              End="0,19.4499987059831">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4499987059831" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Tabela STG_SI_LOG_2018\Insere CSV - STG_SI_LOG_2018">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

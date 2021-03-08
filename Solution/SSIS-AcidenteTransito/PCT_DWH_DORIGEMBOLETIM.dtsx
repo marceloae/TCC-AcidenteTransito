@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2021 10:19:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{43014098-AAA9-4C06-81FA-0B0028C1DFF8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PCT_DWH_DORIGEMBOLETIM"
+  DTS:VersionBuild="66"
+  DTS:VersionGUID="{AAD1DC2F-D8A5-4369-B731-A9DCCAA9B59E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.TCC_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1CBBA9AC-4564-41CD-8A2C-15AA0E2D0C6C}"
+      DTS:ObjectName="LocalHost.TCC_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TCC_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Dim DORIGEMBOLETIM"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{1A0D00F3-807B-4C06-A141-74182E86275C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Dim DORIGEMBOLETIM"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1CBBA9AC-4564-41CD-8A2C-15AA0E2D0C6C}"
+          SQLTask:SqlStatementSource="merge dOrigemBoletim Dim&#xA;&#xA;using&#xA;(&#xA;select&#xA;distinct&#xA;(&#xA;case&#xA;&#x9;when&#x9;stg_bol_at.deorigemboletim = 'ni'&#xA;&#x9;then&#x9;'-1'&#xA;&#x9;else&#x9;stg_bol_at.deorigemboletim&#xA;&#xA;end&#xA;)&#x9;&#x9;as 'cdorigemboletim',&#xA;(&#xA;case&#xA;&#x9;when&#x9;stg_bol_at.deorigemboletim = 'ni'&#xA;&#x9;then&#x9;'Não Informado'&#xA;&#x9;else&#x9;stg_bol_at.deorigemboletim&#xA;&#xA;end&#xA;)&#x9;&#x9;as 'deorigemboletim',&#xA;getdate()&#x9;as 'dtcarga'&#xA;&#xA;from&#x9;tcc_stg.dbo.stg_bol_at&#xA;) Query on ( Dim.cdorigemboletim = Query.cdorigemboletim )&#xA;&#xA;when&#x9;matched&#x9;then&#xA;&#x9;update&#xA;&#x9;set&#x9;Dim.deorigemboletim&#x9;= Query.deorigemboletim,&#xA;&#x9;&#x9;Dim.dtcarga&#x9;&#x9;= Query.dtcarga&#xA;&#xA;when&#x9;not matched by target then&#xA;&#x9;insert&#xA;&#x9;(&#xA;&#x9;cdorigemboletim,&#xA;&#x9;deorigemboletim,&#xA;&#x9;dtcarga&#xA;&#x9;)&#xA;&#x9;values&#xA;&#x9;(&#xA;&#x9;Query.cdorigemboletim,&#xA;&#x9;Query.deorigemboletim,&#xA;&#x9;Query.dtcarga&#xA;&#x9;)&#xA;;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="222.666666666667,42.6666666666667"
+          Id="Package\Carga Dim DORIGEMBOLETIM"
+          TopLeft="31.3333329483867,29.3333329071602" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

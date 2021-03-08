@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "SSAS-AcidenteTransito", "SSAS-AcidenteTransito\SSAS-AcidenteTransito.smproj", "{8CE414BB-95B2-4C99-9E03-51BA72086E22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fonte de Dados", "Fonte de Dados", "{8B155102-EE6A-4C81-BB9D-CF74416CE841}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\dicionario-tabela-si-bol.csv = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\dicionario-tabela-si-bol.csv
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\dicionario-tabela-si-env.csv = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\dicionario-tabela-si-env.csv
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si-bol_2017.csv = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si-bol_2017.csv
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si-bol_2018.csv = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si-bol_2018.csv
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si-bol_2019.csv = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si-bol_2019.csv
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si_env_2017.csv = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si_env_2017.csv
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si_env_2017.xlsx = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si_env_2017.xlsx
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si_env_2018.csv = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si_env_2018.csv
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si_env_2019.csv = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC\Dados\si_env_2019.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{B5D88EE8-8231-431A-BBAF-4E6C012F7604}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC - Acidentes de Trânsito\Scripts\01 - Script Criação Database TCC_STG.sql = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC - Acidentes de Trânsito\Scripts\01 - Script Criação Database TCC_STG.sql
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC - Acidentes de Trânsito\Scripts\02 - Script Criação Database TCC_DWH.sql = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC - Acidentes de Trânsito\Scripts\02 - Script Criação Database TCC_DWH.sql
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC - Acidentes de Trânsito\Scripts\03 - Script Criação Tabelas Database TCC_DWH.sql = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC - Acidentes de Trânsito\Scripts\03 - Script Criação Tabelas Database TCC_DWH.sql
+		..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC - Acidentes de Trânsito\Scripts\03 - Script Criação Tabelas Database TCC_STG.sql = ..\..\..\OneDrive\Pessoal\Conhecimento\PUC - Pós BI & Analytics\TCC - Acidentes de Trânsito\Scripts\03 - Script Criação Tabelas Database TCC_STG.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentação", "Documentação", "{EE5A18D0-406A-47A7-B4A0-5825B2A323C9}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS-AcidenteTransito", "SSIS-AcidenteTransito\SSIS-AcidenteTransito.dtproj", "{992C02FA-5631-4EAE-BFED-DC05E1D35B5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|x86 = Development|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Deploy.0 = Development|x86
+		{992C02FA-5631-4EAE-BFED-DC05E1D35B5D}.Development|x86.ActiveCfg = Development
+		{992C02FA-5631-4EAE-BFED-DC05E1D35B5D}.Development|x86.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C581D331-7FF2-4BF0-9947-59D5A42C9074}
+	EndGlobalSection
+EndGlobal

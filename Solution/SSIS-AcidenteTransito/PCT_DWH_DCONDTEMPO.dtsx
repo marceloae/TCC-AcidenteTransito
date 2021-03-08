@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2021 10:19:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{AB9BF67F-3F27-4C6B-A494-801FABBB2B87}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PCT_DWH_DCONDTEMPO"
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{6B5FD3AE-F287-419C-8E82-4D2D92F36DF3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.TCC_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{38FE1C10-33E4-41FB-A968-242E067CC82F}"
+      DTS:ObjectName="LocalHost.TCC_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TCC_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Dim DCONDTEMPO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{36EE6D1A-D9A3-4745-9EFF-512E42CE2384}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Dim DCONDTEMPO"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{38FE1C10-33E4-41FB-A968-242E067CC82F}"
+          SQLTask:SqlStatementSource="merge dCondTempo Dim&#xA;&#xA;using&#xA;(&#xA;select&#xA;distinct&#xA;(&#xA;case&#xA;&#x9;when&#x9;stg_bol_at.cdcondtempo = 0&#xA;&#x9;then&#x9;-1&#xA;&#x9;else&#x9;stg_bol_at.cdcondtempo&#xA;end&#xA;) as 'cdcondtempo',&#xA;(&#xA;case&#xA;&#x9;when&#x9;stg_bol_at.cdcondtempo = 0&#xA;&#x9;then&#x9;'Não Informado'&#xA;&#x9;else&#x9;stg_bol_at.decondtempo&#xA;end&#xA;) as 'decondtempo',&#xA;getdate() as 'dtcarga'&#xA;&#xA;from&#x9;tcc_stg.dbo.stg_bol_at&#xA;) Query on ( Dim.cdcondtempo = Query.cdcondtempo )&#xA;&#xA;when&#x9;matched&#x9;then&#xA;&#x9;update&#xA;&#x9;set&#x9;Dim.decondtempo&#x9;= Query.decondtempo,&#xA;&#x9;&#x9;Dim.dtcarga&#x9;= Query.dtcarga&#xA;&#xA;when&#x9;not matched by target then&#xA;&#x9;insert&#xA;&#x9;(&#xA;&#x9;cdcondtempo,&#xA;&#x9;decondtempo,&#xA;&#x9;dtcarga&#xA;&#x9;)&#xA;&#x9;values&#xA;&#x9;(&#xA;&#x9;Query.cdcondtempo,&#xA;&#x9;Query.decondtempo,&#xA;&#x9;Query.dtcarga&#xA;&#x9;)&#xA;;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="201.333333333334,42.6666666666667"
+          Id="Package\Carga Dim DCONDTEMPO"
+          TopLeft="31.3333329483867,29.3333329071602" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

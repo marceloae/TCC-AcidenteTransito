@@ -1,0 +1,1630 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2021 10:48:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{9055623D-FC08-4336-8473-D6F0B954DC74}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PCT_STG_SI_BOL_2017"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{82ACC0DB-C0F1-4031-86C7-717C2AD00E79}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F8C4A564-C485-4BB3-83C6-387CE0EB96C8}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TCC_STG;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{346A82D0-3DA6-4FB2-A1DB-5052DD8E3CE8}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\marcelo.eugenio\OneDrive\Pessoal\Conhecimento\PUC - Pós BI &amp; Analytics\TCC\Dados\si-bol_2017.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" NUMERO_BOLETIM"
+              DTS:DTSID="{72836A47-F93D-4D1B-B097-E74FE190A96B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DATA HORA_BOLETIM"
+              DTS:DTSID="{F8E264BE-9AF2-4DB0-AE6D-BC587C8167E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DATA_INCLUSAO"
+              DTS:DTSID="{61FE36EF-5E68-4674-9BBA-D9AC13CD4C6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" TIPO_ACIDENTE"
+              DTS:DTSID="{65D63F26-9DE9-49FB-A648-B55A0D8DEFC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DESC_TIPO_ACIDENTE"
+              DTS:DTSID="{4B9A011D-5C99-482F-B762-9542F436CE80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" COD_TEMPO"
+              DTS:DTSID="{8981685C-5C88-40EF-A21A-11EDF173F0BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DESC_TEMPO"
+              DTS:DTSID="{2E9BA86E-3561-4EB2-A77E-13A26A5EE1EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" COD_PAVIMENTO"
+              DTS:DTSID="{6F1FF969-40F4-44AA-9DE2-B1449128C7F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" PAVIMENTO"
+              DTS:DTSID="{7A0C5964-5A7F-4D66-9E7A-F1DAC60C1A31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" COD_REGIONAL"
+              DTS:DTSID="{441A904F-79F5-4BFE-B643-9F8470BB3056}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DESC_REGIONAL"
+              DTS:DTSID="{C645B50F-3252-4AB5-9230-90B896002CDE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" ORIGEM_BOLETIM"
+              DTS:DTSID="{7EA707F8-02C7-4E00-8938-0AFB42B2095A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" LOCAL_SINALIZADO"
+              DTS:DTSID="{F9E40B76-25AE-43E2-B622-D3DDB29D0572}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" VELOCIDADE_PERMITIDA"
+              DTS:DTSID="{93498435-DBD3-4A15-99B8-402EFEF1D70E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" COORDENADA_X"
+              DTS:DTSID="{952CC33E-B5FD-4B3E-813F-378B973C8970}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" COORDENADA_Y"
+              DTS:DTSID="{DDE66022-191A-4A7F-9CBD-3E9E90CDF217}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" HORA_INFORMADA"
+              DTS:DTSID="{2174DFCB-8B01-498E-8155-9F7E3516C256}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" INDICADOR_FATALIDADE"
+              DTS:DTSID="{213059CF-D002-49F1-9DDF-D052A63CF8AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" VALOR_UPS"
+              DTS:DTSID="{BAA8CC0E-959A-4EA2-BB54-F0F7B849870F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DESCRIÇÃO_UPS"
+              DTS:DTSID="{E14DB440-56EC-466F-B22B-A16D98535DFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DATA_ALTERACAO_SMSA"
+              DTS:DTSID="{FAF27A9C-654E-4D8E-B03A-2DD07790A637}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" VALOR_UPS_ANTIGA"
+              DTS:DTSID="{F7AA238D-A9A4-4F23-8AC6-C01D829C0E26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" DESCRIÇÃO_UPS_ANTIGA"
+              DTS:DTSID="{53A27BC8-2166-47A4-9EE0-E902C092F07F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Tabela STG_SI_BOL_2017"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{FB73439E-B023-4AA4-A1EC-7C61D5F4D893}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Tabela STG_SI_BOL_2017"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga"
+              componentClassID="Microsoft.Lineage"
+              contactInfo="Auditoria;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Inclui dados sobre o ambiente em que o pacote é executado. Mapeie variáveis de sistema para novas colunas de saída. Por exemplo, adicione o nome do computador e o operador ao fluxo de dados."
+              name="Data Carga">
+              <inputs>
+                <input
+                  refId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga.Inputs[Auditoria Entrada 1]"
+                  name="Auditoria Entrada 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga.Outputs[Auditoria Saída 1]"
+                  exclusionGroup="1"
+                  name="Auditoria Saída 1"
+                  synchronousInputId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga.Inputs[Auditoria Entrada 1]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga.Outputs[Auditoria Saída 1].Columns[DTCARGA]"
+                      dataType="date"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga.Outputs[Auditoria Saída 1].Columns[DTCARGA]"
+                      name="DTCARGA">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica qual item de auditoria é produzido por esta coluna."
+                          name="LineageItemSelected"
+                          typeConverter="LineageItemSelected">4</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem de Arquivo Simples"
+              localeId="1046"
+              name="Importa CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples]"
+                  name="Saída de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ NUMERO_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ NUMERO_BOLETIM]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ NUMERO_BOLETIM]"
+                      name=" NUMERO_BOLETIM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA HORA_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DATA HORA_BOLETIM]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA HORA_BOLETIM]"
+                      name=" DATA HORA_BOLETIM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA_INCLUSAO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DATA_INCLUSAO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA_INCLUSAO]"
+                      name=" DATA_INCLUSAO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ TIPO_ACIDENTE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ TIPO_ACIDENTE]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ TIPO_ACIDENTE]"
+                      name=" TIPO_ACIDENTE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_TIPO_ACIDENTE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESC_TIPO_ACIDENTE]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_TIPO_ACIDENTE]"
+                      name=" DESC_TIPO_ACIDENTE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_TEMPO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COD_TEMPO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_TEMPO]"
+                      name=" COD_TEMPO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_TEMPO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESC_TEMPO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_TEMPO]"
+                      name=" DESC_TEMPO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_PAVIMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COD_PAVIMENTO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_PAVIMENTO]"
+                      name=" COD_PAVIMENTO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ PAVIMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ PAVIMENTO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ PAVIMENTO]"
+                      name=" PAVIMENTO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_REGIONAL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COD_REGIONAL]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_REGIONAL]"
+                      name=" COD_REGIONAL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_REGIONAL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESC_REGIONAL]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_REGIONAL]"
+                      name=" DESC_REGIONAL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ ORIGEM_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ ORIGEM_BOLETIM]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ ORIGEM_BOLETIM]"
+                      name=" ORIGEM_BOLETIM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ LOCAL_SINALIZADO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ LOCAL_SINALIZADO]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ LOCAL_SINALIZADO]"
+                      name=" LOCAL_SINALIZADO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VELOCIDADE_PERMITIDA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ VELOCIDADE_PERMITIDA]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VELOCIDADE_PERMITIDA]"
+                      name=" VELOCIDADE_PERMITIDA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COORDENADA_X]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COORDENADA_X]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COORDENADA_X]"
+                      name=" COORDENADA_X"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COORDENADA_Y]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COORDENADA_Y]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COORDENADA_Y]"
+                      name=" COORDENADA_Y"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ HORA_INFORMADA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ HORA_INFORMADA]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ HORA_INFORMADA]"
+                      name=" HORA_INFORMADA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ INDICADOR_FATALIDADE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ INDICADOR_FATALIDADE]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ INDICADOR_FATALIDADE]"
+                      name=" INDICADOR_FATALIDADE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VALOR_UPS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ VALOR_UPS]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VALOR_UPS]"
+                      name=" VALOR_UPS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESCRIÇÃO_UPS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESCRIÇÃO_UPS]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESCRIÇÃO_UPS]"
+                      name=" DESCRIÇÃO_UPS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA_ALTERACAO_SMSA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DATA_ALTERACAO_SMSA]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA_ALTERACAO_SMSA]"
+                      name=" DATA_ALTERACAO_SMSA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VALOR_UPS_ANTIGA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ VALOR_UPS_ANTIGA]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VALOR_UPS_ANTIGA]"
+                      name=" VALOR_UPS_ANTIGA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESCRIÇÃO_UPS_ANTIGA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESCRIÇÃO_UPS_ANTIGA]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESCRIÇÃO_UPS_ANTIGA]"
+                      name=" DESCRIÇÃO_UPS_ANTIGA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ NUMERO_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" NUMERO_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DATA HORA_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DATA HORA_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DATA_INCLUSAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DATA_INCLUSAO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ TIPO_ACIDENTE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" TIPO_ACIDENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESC_TIPO_ACIDENTE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DESC_TIPO_ACIDENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COD_TEMPO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" COD_TEMPO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESC_TEMPO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DESC_TEMPO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COD_PAVIMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" COD_PAVIMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ PAVIMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" PAVIMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COD_REGIONAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" COD_REGIONAL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESC_REGIONAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DESC_REGIONAL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ ORIGEM_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" ORIGEM_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ LOCAL_SINALIZADO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" LOCAL_SINALIZADO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ VELOCIDADE_PERMITIDA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" VELOCIDADE_PERMITIDA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COORDENADA_X]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" COORDENADA_X" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ COORDENADA_Y]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" COORDENADA_Y" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ HORA_INFORMADA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" HORA_INFORMADA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ INDICADOR_FATALIDADE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" INDICADOR_FATALIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ VALOR_UPS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" VALOR_UPS" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESCRIÇÃO_UPS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DESCRIÇÃO_UPS" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DATA_ALTERACAO_SMSA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DATA_ALTERACAO_SMSA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ VALOR_UPS_ANTIGA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" VALOR_UPS_ANTIGA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ DESCRIÇÃO_UPS_ANTIGA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" DESCRIÇÃO_UPS_ANTIGA" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Insere CSV - STG_SI_BOL_2017"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[STG_SI_BOL_2017]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ NUMERO_BOLETIM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" NUMERO_BOLETIM"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[NUMERO_BOLETIM]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ NUMERO_BOLETIM]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ DATA_INCLUSAO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DATA_INCLUSAO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DATA_INCLUSAO]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA_INCLUSAO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ TIPO_ACIDENTE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" TIPO_ACIDENTE"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[TIPO_ACIDENTE]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ TIPO_ACIDENTE]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ DESC_TIPO_ACIDENTE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DESC_TIPO_ACIDENTE"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESC_TIPO_ACIDENTE]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_TIPO_ACIDENTE]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ COD_TEMPO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" COD_TEMPO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COD_TEMPO]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_TEMPO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ DESC_TEMPO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DESC_TEMPO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESC_TEMPO]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_TEMPO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ COD_PAVIMENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" COD_PAVIMENTO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COD_PAVIMENTO]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_PAVIMENTO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ PAVIMENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" PAVIMENTO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[PAVIMENTO]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ PAVIMENTO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ COD_REGIONAL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" COD_REGIONAL"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COD_REGIONAL]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COD_REGIONAL]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ DESC_REGIONAL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DESC_REGIONAL"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESC_REGIONAL]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESC_REGIONAL]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ ORIGEM_BOLETIM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" ORIGEM_BOLETIM"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[ORIGEM_BOLETIM]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ ORIGEM_BOLETIM]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ LOCAL_SINALIZADO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" LOCAL_SINALIZADO"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[LOCAL_SINALIZADO]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ LOCAL_SINALIZADO]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ VELOCIDADE_PERMITIDA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" VELOCIDADE_PERMITIDA"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[VELOCIDADE_PERMITIDA]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VELOCIDADE_PERMITIDA]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ COORDENADA_X]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" COORDENADA_X"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COORDENADA_X]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COORDENADA_X]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ COORDENADA_Y]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" COORDENADA_Y"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COORDENADA_Y]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ COORDENADA_Y]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ HORA_INFORMADA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" HORA_INFORMADA"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[HORA_INFORMADA]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ HORA_INFORMADA]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ INDICADOR_FATALIDADE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" INDICADOR_FATALIDADE"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[INDICADOR_FATALIDADE]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ INDICADOR_FATALIDADE]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ VALOR_UPS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" VALOR_UPS"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[VALOR_UPS]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VALOR_UPS]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ DESCRIÇÃO_UPS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DESCRIÇÃO_UPS"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESCRICAO_UPS]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESCRIÇÃO_UPS]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ DATA_ALTERACAO_SMSA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DATA_ALTERACAO_SMSA"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DATA_ALTERACAO_SMSA]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA_ALTERACAO_SMSA]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ VALOR_UPS_ANTIGA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" VALOR_UPS_ANTIGA"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[VALOR_UPS_ANTIGA]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ VALOR_UPS_ANTIGA]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ DESCRIÇÃO_UPS_ANTIGA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DESCRIÇÃO_UPS_ANTIGA"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESCRICAO_UPS_ANTIGA]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DESCRIÇÃO_UPS_ANTIGA]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[ DATA HORA_BOLETIM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" DATA HORA_BOLETIM"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DATA_HORA_BOLETIM]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples].Columns[ DATA HORA_BOLETIM]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].Columns[DTCARGA]"
+                      cachedDataType="date"
+                      cachedName="DTCARGA"
+                      externalMetadataColumnId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DTCARGA]"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga.Outputs[Auditoria Saída 1].Columns[DTCARGA]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[IDREG]"
+                      dataType="i4"
+                      name="IDREG" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[NUMERO_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUMERO_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DATA_INCLUSAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATA_INCLUSAO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[TIPO_ACIDENTE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TIPO_ACIDENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESC_TIPO_ACIDENTE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DESC_TIPO_ACIDENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COD_TEMPO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COD_TEMPO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESC_TEMPO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DESC_TEMPO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COD_PAVIMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COD_PAVIMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[PAVIMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PAVIMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COD_REGIONAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COD_REGIONAL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESC_REGIONAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DESC_REGIONAL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[ORIGEM_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORIGEM_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[LOCAL_SINALIZADO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LOCAL_SINALIZADO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[VELOCIDADE_PERMITIDA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VELOCIDADE_PERMITIDA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COORDENADA_X]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COORDENADA_X" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[COORDENADA_Y]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COORDENADA_Y" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[HORA_INFORMADA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="HORA_INFORMADA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[INDICADOR_FATALIDADE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="INDICADOR_FATALIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[VALOR_UPS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VALOR_UPS" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESCRICAO_UPS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DESCRICAO_UPS" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DATA_ALTERACAO_SMSA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATA_ALTERACAO_SMSA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[VALOR_UPS_ANTIGA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VALOR_UPS_ANTIGA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DESCRICAO_UPS_ANTIGA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DESCRICAO_UPS_ANTIGA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DATA_HORA_BOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DATA_HORA_BOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input].ExternalColumns[DTCARGA]"
+                      dataType="dbTimeStamp"
+                      name="DTCARGA" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga Tabela STG_SI_BOL_2017.Paths[Auditoria Saída 1]"
+              endId="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017.Inputs[Destination Input]"
+              name="Auditoria Saída 1"
+              startId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga.Outputs[Auditoria Saída 1]" />
+            <path
+              refId="Package\Carga Tabela STG_SI_BOL_2017.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\Carga Tabela STG_SI_BOL_2017\Data Carga.Inputs[Auditoria Entrada 1]"
+              name="Saída de Origem de Arquivo Simples"
+              startId="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV.Outputs[Saída de Origem de Arquivo Simples]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Deleta Tabela STG_SI_BOL_2017"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{16C30243-30AC-4C88-B7A9-F26FED0A558C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Deleta Tabela STG_SI_BOL_2017"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F8C4A564-C485-4BB3-83C6-387CE0EB96C8}"
+          SQLTask:SqlStatementSource="truncate table STG_SI_BOL_2017" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{970FAD5F-ECE9-43B3-81CE-F0A2875B75CA\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{970FAD5F-ECE9-43B3-81CE-F0A2875B75CA}"
+      DTS:From="Package\Deleta Tabela STG_SI_BOL_2017"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{970FAD5F-ECE9-43B3-81CE-F0A2875B75CA}"
+      DTS:To="Package\Carga Tabela STG_SI_BOL_2017" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="237.333333333334,42.6666666666667"
+          Id="Package\Carga Tabela STG_SI_BOL_2017"
+          TopLeft="5.50000000000001,108.166666666667" />
+        <NodeLayout
+          Size="237.333333333334,42.6666666666667"
+          Id="Package\Deleta Tabela STG_SI_BOL_2017"
+          TopLeft="5.50000000000001,5.50000000000004" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{970FAD5F-ECE9-43B3-81CE-F0A2875B75CA\}]"
+          TopLeft="124.166666666667,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carga Tabela STG_SI_BOL_2017">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="230.666666666667,42.6666666666667"
+          Id="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017"
+          TopLeft="24.6666663810611,188.333331899842" />
+        <NodeLayout
+          Size="230.666666666667,42.6666666666667"
+          Id="Package\Carga Tabela STG_SI_BOL_2017\Importa CSV"
+          TopLeft="24.6666663810611,21.9666663722198" />
+        <NodeLayout
+          Size="230.666666666667,42.6666666666667"
+          Id="Package\Carga Tabela STG_SI_BOL_2017\Data Carga"
+          TopLeft="24.6666663810611,105.149999136031" />
+        <EdgeLayout
+          Id="Package\Carga Tabela STG_SI_BOL_2017.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="139.999999714394,64.6333330388865">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.5166660971446"
+              Start="0,0"
+              End="0,33.0166660971446">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.0166660971446" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Tabela STG_SI_BOL_2017.Paths[Auditoria Saída 1]"
+          TopLeft="139.999999714394,147.816665802698">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.5166660971446"
+              Start="0,0"
+              End="0,33.0166660971446">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.0166660971446" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Tabela STG_SI_BOL_2017\Insere CSV - STG_SI_BOL_2017">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

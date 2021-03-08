@@ -1,0 +1,2434 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "pt-BR",
+    "dataSources": [
+      {
+        "name": "SqlServer localhost TCC_DWH",
+        "connectionString": "Provider=SQLNCLI11;Data Source=.;Initial Catalog=TCC_DWH;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "nt\\marcelo.eugenio",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "fAcidenteTransito",
+        "columns": [
+          {
+            "name": "idboletim",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idboletim",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "iddtboletim",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "iddtboletim",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "iddtinclusao",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "iddtinclusao",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "idflagcondutor",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idflagcondutor",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idseveridade",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idseveridade",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idsexo",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idsexo",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idflagcintoseguranca",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idflagcintoseguranca",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idflagembriaguez",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idflagembriaguez",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ididade",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ididade",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idcategoriahabilitacao",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idcategoriahabilitacao",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idtipoveiculo",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idtipoveiculo",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idflagpedestre",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idflagpedestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idflagpassageiro",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idflagpassageiro",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idtipoacidente",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idtipoacidente",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idcondtempo",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idcondtempo",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idpavimento",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idpavimento",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idregional",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idregional",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idorigemboletim",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idorigemboletim",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idflaglocalsinalizado",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idflaglocalsinalizado",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idflagfatalidade",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idflagfatalidade",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "idvelocidadepermitida",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idvelocidadepermitida",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "nucoordenadax",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nucoordenadax",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "nucoordenaday",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "nucoordenaday",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "qtenvolvido",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "qtenvolvido",
+            "formatString": "#,0",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "qtacidente",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "qtacidente",
+            "formatString": "#,0",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "dtcarga",
+            "formatString": "dd/MM/yyyy HH:mm:ss",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1046\" Group=\"GeneralLongDateTime\" FormatString=\"dd/MM/yyyy HH:mm:ss\" /></DateTimes></Format>"
+              }
+            ]
+          },
+          {
+            "name": "idhrboletim",
+            "dataType": "int64",
+            "sourceColumn": "idhrboletim"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fAcidenteTransito",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select",
+                "facidentetransito.idboletim,",
+                "facidentetransito.iddtboletim,",
+                "facidentetransito.idhrboletim,",
+                "facidentetransito.iddtinclusao,",
+                "facidentetransito.idflagcondutor,",
+                "facidentetransito.idseveridade,",
+                "facidentetransito.idsexo,",
+                "facidentetransito.idflagcintoseguranca,",
+                "facidentetransito.idflagembriaguez,",
+                "facidentetransito.ididade,",
+                "facidentetransito.idcategoriahabilitacao,",
+                "facidentetransito.idtipoveiculo,",
+                "facidentetransito.idflagpedestre,",
+                "facidentetransito.idflagpassageiro,",
+                "facidentetransito.idtipoacidente,",
+                "facidentetransito.idcondtempo,",
+                "facidentetransito.idpavimento,",
+                "facidentetransito.idregional,",
+                "facidentetransito.idorigemboletim,",
+                "facidentetransito.idflaglocalsinalizado,",
+                "facidentetransito.idflagfatalidade,",
+                "facidentetransito.idvelocidadepermitida,",
+                "facidentetransito.nucoordenadax,",
+                "facidentetransito.nucoordenaday,",
+                "facidentetransito.qtenvolvido,",
+                "facidentetransito.qtacidente,",
+                "facidentetransito.dtcarga",
+                "",
+                "from\tfacidentetransito"
+              ],
+              "dataSource": "SqlServer localhost TCC_DWH"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select",
+                  "facidentetransito.idboletim,",
+                  "facidentetransito.iddtboletim,",
+                  "facidentetransito.idhrboletim,",
+                  "facidentetransito.iddtinclusao,",
+                  "facidentetransito.idflagcondutor,",
+                  "facidentetransito.idseveridade,",
+                  "facidentetransito.idsexo,",
+                  "facidentetransito.idflagcintoseguranca,",
+                  "facidentetransito.idflagembriaguez,",
+                  "facidentetransito.ididade,",
+                  "facidentetransito.idcategoriahabilitacao,",
+                  "facidentetransito.idtipoveiculo,",
+                  "facidentetransito.idflagpedestre,",
+                  "facidentetransito.idflagpassageiro,",
+                  "facidentetransito.idtipoacidente,",
+                  "facidentetransito.idcondtempo,",
+                  "facidentetransito.idpavimento,",
+                  "facidentetransito.idregional,",
+                  "facidentetransito.idorigemboletim,",
+                  "facidentetransito.idflaglocalsinalizado,",
+                  "facidentetransito.idflagfatalidade,",
+                  "facidentetransito.idvelocidadepermitida,",
+                  "facidentetransito.nucoordenadax,",
+                  "facidentetransito.nucoordenaday,",
+                  "facidentetransito.qtenvolvido,",
+                  "facidentetransito.qtacidente,",
+                  "facidentetransito.dtcarga",
+                  "",
+                  "from\tfacidentetransito</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "Quantidade Acidentes",
+            "expression": " DistinctCount ( dBoletim[Número Boletim] )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Quantidade Envolvidos",
+            "expression": " Sum ( fAcidenteTransito[qtenvolvido] )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Média Mensal Envolvidos",
+            "expression": [
+              "",
+              "Var TotalEnvolvidos = Sum ( fAcidenteTransito[qtenvolvido] )",
+              "Var TotalPeriodo = Calculate ( DistinctCount ( dTempoBoletim[Período] ) )",
+              "",
+              "Return TotalEnvolvidos / TotalPeriodo"
+            ],
+            "formatString": "#,0"
+          },
+          {
+            "name": "Média Mensal Acidentes",
+            "expression": [
+              "",
+              "Var TotalAcidentes = DistinctCount ( dBoletim[Número Boletim] )",
+              "Var TotalPeriodo = Calculate ( DistinctCount ( dTempoBoletim[Período] ) )",
+              "",
+              "Return TotalAcidentes / TotalPeriodo"
+            ],
+            "formatString": "#,0"
+          },
+          {
+            "name": "% Acidentes",
+            "expression": [
+              "",
+              "Var TotalContexto = DistinctCount ( dBoletim[Número Boletim] )",
+              "Var TotalFato = Calculate ( DistinctCount ( dBoletim[Número Boletim] ), All ( fAcidenteTransito ) )",
+              "",
+              "Return TotalContexto / TotalFato"
+            ],
+            "formatString": "#,0.00%;-#,0.00%;#,0.00%"
+          },
+          {
+            "name": "Quantidade Acidentes Fatais",
+            "expression": " Calculate ( DistinctCount ( dBoletim[Número Boletim] ), dFlagFatalidade[Com Fatalidade?] = \"Sim\" )"
+          },
+          {
+            "name": "Quantidade Envolvidos Fatais",
+            "expression": " Calculate ( Sum ( fAcidenteTransito[qtacidente] ), dFlagFatalidade[Com Fatalidade?] = \"Sim\" )"
+          },
+          {
+            "name": "Média Envolvidos Acidente",
+            "expression": [
+              "",
+              "Var TotalAcidentes = DistinctCount ( dBoletim[Número Boletim] )",
+              "Var TotalEnvolvidos = Calculate ( Sum ( fAcidenteTransito[qtenvolvido] ) )",
+              "",
+              "Return TotalEnvolvidos / TotalAcidentes"
+            ],
+            "formatString": "0.00"
+          },
+          {
+            "name": "Média Mensal Acidentes Fatais",
+            "expression": [
+              "",
+              "Var TotalAcidentesFatais = Calculate ( Sum ( fAcidenteTransito[qtacidente] ), dFlagFatalidade[Com Fatalidade?] = \"Sim\" )",
+              "Var TotalPeriodo = Calculate ( DistinctCount ( dTempoBoletim[Período] ) )",
+              "",
+              "Return TotalAcidentesFatais / TotalPeriodo"
+            ],
+            "formatString": "0.00"
+          },
+          {
+            "name": "Média Mensal Envolvidos Sem Cinto",
+            "expression": [
+              "",
+              "Var TotalAcidentesFatais = Calculate ( Sum ( fAcidenteTransito[qtacidente] ), dFlagCintoSeguranca[Com Cinto Segurança?] = \"Não\" )",
+              "Var TotalPeriodo = Calculate ( DistinctCount ( dTempoBoletim[Período] ) )",
+              "",
+              "Return TotalAcidentesFatais / TotalPeriodo"
+            ],
+            "formatString": "0.00"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select",
+              "facidentetransito.idboletim,",
+              "facidentetransito.iddtboletim,",
+              "facidentetransito.idhrboletim,",
+              "facidentetransito.iddtinclusao,",
+              "facidentetransito.idflagcondutor,",
+              "facidentetransito.idseveridade,",
+              "facidentetransito.idsexo,",
+              "facidentetransito.idflagcintoseguranca,",
+              "facidentetransito.idflagembriaguez,",
+              "facidentetransito.ididade,",
+              "facidentetransito.idcategoriahabilitacao,",
+              "facidentetransito.idtipoveiculo,",
+              "facidentetransito.idflagpedestre,",
+              "facidentetransito.idflagpassageiro,",
+              "facidentetransito.idtipoacidente,",
+              "facidentetransito.idcondtempo,",
+              "facidentetransito.idpavimento,",
+              "facidentetransito.idregional,",
+              "facidentetransito.idorigemboletim,",
+              "facidentetransito.idflaglocalsinalizado,",
+              "facidentetransito.idflagfatalidade,",
+              "facidentetransito.idvelocidadepermitida,",
+              "facidentetransito.nucoordenadax,",
+              "facidentetransito.nucoordenaday,",
+              "facidentetransito.qtenvolvido,",
+              "facidentetransito.qtacidente,",
+              "facidentetransito.dtcarga",
+              "",
+              "from\tfacidentetransito"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "fAcidenteTransito"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select",
+              "facidentetransito.idboletim,",
+              "facidentetransito.iddtboletim,",
+              "facidentetransito.idhrboletim,",
+              "facidentetransito.iddtinclusao,",
+              "facidentetransito.idflagcondutor,",
+              "facidentetransito.idseveridade,",
+              "facidentetransito.idsexo,",
+              "facidentetransito.idflagcintoseguranca,",
+              "facidentetransito.idflagembriaguez,",
+              "facidentetransito.ididade,",
+              "facidentetransito.idcategoriahabilitacao,",
+              "facidentetransito.idtipoveiculo,",
+              "facidentetransito.idflagpedestre,",
+              "facidentetransito.idflagpassageiro,",
+              "facidentetransito.idtipoacidente,",
+              "facidentetransito.idcondtempo,",
+              "facidentetransito.idpavimento,",
+              "facidentetransito.idregional,",
+              "facidentetransito.idorigemboletim,",
+              "facidentetransito.idflaglocalsinalizado,",
+              "facidentetransito.idflagfatalidade,",
+              "facidentetransito.idvelocidadepermitida,",
+              "facidentetransito.nucoordenadax,",
+              "facidentetransito.nucoordenaday,",
+              "facidentetransito.qtenvolvido,",
+              "facidentetransito.qtacidente,",
+              "facidentetransito.dtcarga",
+              "",
+              "from\tfacidentetransito</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "dBoletim",
+        "columns": [
+          {
+            "name": "idboletim",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idboletim",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Número Boletim",
+            "dataType": "string",
+            "sourceColumn": "cdboletim",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Descrição Boletim",
+            "dataType": "string",
+            "sourceColumn": "deboletim",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "dtcarga",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dBoletim",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select",
+                "dboletim.idboletim,",
+                "dboletim.cdboletim,",
+                "dboletim.deboletim,",
+                "dboletim.dtcarga",
+                "",
+                "from\tdboletim"
+              ],
+              "dataSource": "SqlServer localhost TCC_DWH"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select",
+                  "dboletim.idboletim,",
+                  "dboletim.cdboletim,",
+                  "dboletim.deboletim,",
+                  "dboletim.dtcarga",
+                  "",
+                  "from\tdboletim</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select",
+              "dboletim.idboletim,",
+              "dboletim.cdboletim,",
+              "dboletim.deboletim,",
+              "dboletim.dtcarga",
+              "",
+              "from\tdboletim"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dBoletim"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select",
+              "dboletim.idboletim,",
+              "dboletim.cdboletim,",
+              "dboletim.deboletim,",
+              "dboletim.dtcarga",
+              "",
+              "from\tdboletim</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "dSexo",
+        "columns": [
+          {
+            "name": "idsexo",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idsexo",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Sexo",
+            "dataType": "int64",
+            "sourceColumn": "cdsexo",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sexo",
+            "dataType": "string",
+            "sourceColumn": "desexo",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "dtcarga",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dSexo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select",
+                "dsexo.idsexo,",
+                "dsexo.cdsexo,",
+                "dsexo.desexo,",
+                "dsexo.dtcarga",
+                "",
+                "from\tdsexo"
+              ],
+              "dataSource": "SqlServer localhost TCC_DWH"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select",
+                  "dsexo.idsexo,",
+                  "dsexo.cdsexo,",
+                  "dsexo.desexo,",
+                  "dsexo.dtcarga",
+                  "",
+                  "from\tdsexo</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select",
+              "dsexo.idsexo,",
+              "dsexo.cdsexo,",
+              "dsexo.desexo,",
+              "dsexo.dtcarga",
+              "",
+              "from\tdsexo"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dSexo"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select",
+              "dsexo.idsexo,",
+              "dsexo.cdsexo,",
+              "dsexo.desexo,",
+              "dsexo.dtcarga",
+              "",
+              "from\tdsexo</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "dCategoriaHabilitacao",
+        "columns": [
+          {
+            "name": "idcategoriahabilitacao",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "idcategoriahabilitacao",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Categoria Habilitação",
+            "dataType": "string",
+            "sourceColumn": "cdcategoriahabilitacao",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Categoria Habilitação",
+            "dataType": "string",
+            "sourceColumn": "decategoriahabilitacao",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "dtcarga",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dCategoriaHabilitacao",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select",
+                "dcategoriahabilitacao.idcategoriahabilitacao,",
+                "dcategoriahabilitacao.cdcategoriahabilitacao,",
+                "dcategoriahabilitacao.decategoriahabilitacao,",
+                "dcategoriahabilitacao.dtcarga",
+                "",
+                "from\tdcategoriahabilitacao"
+              ],
+              "dataSource": "SqlServer localhost TCC_DWH"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select",
+                  "dcategoriahabilitacao.idcategoriahabilitacao,",
+                  "dcategoriahabilitacao.cdcategoriahabilitacao,",
+                  "dcategoriahabilitacao.decategoriahabilitacao,",
+                  "dcategoriahabilitacao.dtcarga",
+                  "",
+                  "from\tdcategoriahabilitacao</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select",
+              "dcategoriahabilitacao.idcategoriahabilitacao,",
+              "dcategoriahabilitacao.cdcategoriahabilitacao,",
+              "dcategoriahabilitacao.decategoriahabilitacao,",
+              "dcategoriahabilitacao.dtcarga",
+              "",
+              "from\tdcategoriahabilitacao"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dCategoriaHabilitacao"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select",
+              "dcategoriahabilitacao.idcategoriahabilitacao,",
+              "dcategoriahabilitacao.cdcategoriahabilitacao,",
+              "dcategoriahabilitacao.decategoriahabilitacao,",
+              "dcategoriahabilitacao.dtcarga",
+              "",
+              "from\tdcategoriahabilitacao</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "dCondTempo",
+        "columns": [
+          {
+            "name": "IDCONDTEMPO",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDCONDTEMPO",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Condição Tempo",
+            "dataType": "string",
+            "sourceColumn": "CDCONDTEMPO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Condição Tempo",
+            "dataType": "string",
+            "sourceColumn": "DECONDTEMPO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dCondTempo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dCondTempo].* FROM [dbo].[dCondTempo] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dCondTempo].* FROM [dbo].[dCondTempo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dCondTempo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dFlagCintoSeguranca",
+        "columns": [
+          {
+            "name": "IDFLAGCINTOSEGURANCA",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDFLAGCINTOSEGURANCA",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Flag Cinto Segurança",
+            "dataType": "string",
+            "sourceColumn": "CDFLAGCINTOSEGURANCA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Com Cinto Segurança?",
+            "dataType": "string",
+            "sourceColumn": "DEFLAGCINTOSEGURANCA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dFlagCintoSeguranca",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dFlagCintoSeguranca].* FROM [dbo].[dFlagCintoSeguranca] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dFlagCintoSeguranca].* FROM [dbo].[dFlagCintoSeguranca] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dFlagCintoSeguranca"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dFlagCondutor",
+        "columns": [
+          {
+            "name": "IDFLAGCONDUTOR",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDFLAGCONDUTOR",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Flag Condutor",
+            "dataType": "string",
+            "sourceColumn": "CDFLAGCONDUTOR",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Condutor?",
+            "dataType": "string",
+            "sourceColumn": "DEFLAGCONDUTOR",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dFlagCondutor",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dFlagCondutor].* FROM [dbo].[dFlagCondutor] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dFlagCondutor].* FROM [dbo].[dFlagCondutor] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dFlagCondutor"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dFlagEmbriaguez",
+        "columns": [
+          {
+            "name": "IDFLAGEMBRIAGUEZ",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDFLAGEMBRIAGUEZ",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Flag Embriaguez",
+            "dataType": "string",
+            "sourceColumn": "CDFLAGEMBRIAGUEZ",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Com Embriaguez?",
+            "dataType": "string",
+            "sourceColumn": "DEFLAGEMBRIAGUEZ",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dFlagEmbriaguez",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dFlagEmbriaguez].* FROM [dbo].[dFlagEmbriaguez] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dFlagEmbriaguez].* FROM [dbo].[dFlagEmbriaguez] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dFlagEmbriaguez"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dFlagFatalidade",
+        "columns": [
+          {
+            "name": "IDFLAGFATALIDADE",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDFLAGFATALIDADE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Flag Fatalidade",
+            "dataType": "string",
+            "sourceColumn": "CDFLAGFATALIDADE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Com Fatalidade?",
+            "dataType": "string",
+            "sourceColumn": "DEFLAGFATALIDADE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dFlagFatalidade",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dFlagFatalidade].* FROM [dbo].[dFlagFatalidade] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dFlagFatalidade].* FROM [dbo].[dFlagFatalidade] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dFlagFatalidade"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dFlagLocalSinalizado",
+        "columns": [
+          {
+            "name": "IDFLAGLOCALSINALIZADO",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDFLAGLOCALSINALIZADO",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Flag Local Sinalizado",
+            "dataType": "string",
+            "sourceColumn": "CDFLAGLOCALSINALIZADO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Local Sinalizado?",
+            "dataType": "string",
+            "sourceColumn": "DEFLAGLOCALSINALIZADO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dFlagLocalSinalizado",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dFlagLocalSinalizado].* FROM [dbo].[dFlagLocalSinalizado] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dFlagLocalSinalizado].* FROM [dbo].[dFlagLocalSinalizado] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dFlagLocalSinalizado"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dFlagPassageiro",
+        "columns": [
+          {
+            "name": "IDFLAGPASSAGEIRO",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDFLAGPASSAGEIRO",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Flag Passageiro",
+            "dataType": "string",
+            "sourceColumn": "CDFLAGPASSAGEIRO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "É Passageiro?",
+            "dataType": "string",
+            "sourceColumn": "DEFLAGPASSAGEIRO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dFlagPassageiro",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dFlagPassageiro].* FROM [dbo].[dFlagPassageiro] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dFlagPassageiro].* FROM [dbo].[dFlagPassageiro] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dFlagPassageiro"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dFlagPedestre",
+        "columns": [
+          {
+            "name": "IDFLAGPEDESTRE",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDFLAGPEDESTRE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Flag Pedestre",
+            "dataType": "string",
+            "sourceColumn": "CDFLAGPEDESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "É Pedestre?",
+            "dataType": "string",
+            "sourceColumn": "DEFLAGPEDESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dFlagPedestre",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dFlagPedestre].* FROM [dbo].[dFlagPedestre] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dFlagPedestre].* FROM [dbo].[dFlagPedestre] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dFlagPedestre"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dIdade",
+        "columns": [
+          {
+            "name": "IDIDADE",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDIDADE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Idade",
+            "dataType": "int64",
+            "sourceColumn": "CDIDADE",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Faixa Etária",
+            "dataType": "string",
+            "sourceColumn": "DEFAIXA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Fase Idade",
+            "dataType": "string",
+            "sourceColumn": "DECATEGORIAFAIXA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dIdade",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dIdade].* FROM [dbo].[dIdade] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dIdade].* FROM [dbo].[dIdade] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dIdade"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dOrigemBoletim",
+        "columns": [
+          {
+            "name": "IDORIGEMBOLETIM",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDORIGEMBOLETIM",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Origem Boletim",
+            "dataType": "string",
+            "sourceColumn": "CDORIGEMBOLETIM",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Origem Boletim",
+            "dataType": "string",
+            "sourceColumn": "DEORIGEMBOLETIM",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dOrigemBoletim",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dOrigemBoletim].* FROM [dbo].[dOrigemBoletim] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dOrigemBoletim].* FROM [dbo].[dOrigemBoletim] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dOrigemBoletim"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dPavimento",
+        "columns": [
+          {
+            "name": "IDPAVIMENTO",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDPAVIMENTO",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Pavimento",
+            "dataType": "string",
+            "sourceColumn": "CDPAVIMENTO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Pavimento",
+            "dataType": "string",
+            "sourceColumn": "DEPAVIMENTO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dPavimento",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dPavimento].* FROM [dbo].[dPavimento] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dPavimento].* FROM [dbo].[dPavimento] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dPavimento"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dRegional",
+        "columns": [
+          {
+            "name": "IDREGIONAL",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDREGIONAL",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Regional",
+            "dataType": "string",
+            "sourceColumn": "CDREGIONAL",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Regional",
+            "dataType": "string",
+            "sourceColumn": "DEREGIONAL",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dRegional",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dRegional].* FROM [dbo].[dRegional] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dRegional].* FROM [dbo].[dRegional] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dRegional"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dSeveridade",
+        "columns": [
+          {
+            "name": "IDSEVERIDADE",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDSEVERIDADE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Severidade",
+            "dataType": "int64",
+            "sourceColumn": "CDSEVERIDADE",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Severidade",
+            "dataType": "string",
+            "sourceColumn": "DESEVERIDADE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dSeveridade",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dSeveridade].* FROM [dbo].[dSeveridade] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dSeveridade].* FROM [dbo].[dSeveridade] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dSeveridade"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dTempoBoletim",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "IDDATA",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "IDDATA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data",
+            "dataType": "dateTime",
+            "isKey": true,
+            "sourceColumn": "DATA",
+            "formatString": "dd/MM/yyyy",
+            "sourceProviderType": "DBTimeStamp",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1046\" Group=\"ShortDate\" FormatString=\"dd/MM/yyyy\" /></DateTimes></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Ano",
+            "dataType": "int64",
+            "sourceColumn": "CDANO",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Mês",
+            "dataType": "int64",
+            "sourceColumn": "CDMES",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Descrição Mês",
+            "dataType": "string",
+            "sourceColumn": "DEMES",
+            "sortByColumn": "Mês",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Abreviação Mês",
+            "dataType": "string",
+            "sourceColumn": "DEMESABV",
+            "sortByColumn": "Mês",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dia",
+            "dataType": "int64",
+            "sourceColumn": "CDDIA",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Período",
+            "dataType": "string",
+            "sourceColumn": "CDPERIODO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Período",
+            "dataType": "string",
+            "sourceColumn": "DEPERIODO",
+            "sortByColumn": "Período",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dia Semana",
+            "dataType": "int64",
+            "sourceColumn": "CDDIASEMANA",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Descrição Dia Semana",
+            "dataType": "string",
+            "sourceColumn": "DEDIASEMANA",
+            "sortByColumn": "Dia Semana",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Abreviação Dia Semana",
+            "dataType": "string",
+            "sourceColumn": "DEDIASEMANAABV",
+            "sortByColumn": "Dia Semana",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Flag Final de Semana",
+            "dataType": "string",
+            "sourceColumn": "FLFIMSEMANA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Flag Dia de Semana",
+            "dataType": "string",
+            "sourceColumn": "FLDIASEMANA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Flag Feriado",
+            "dataType": "string",
+            "sourceColumn": "FLFERIADO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Bimestre",
+            "dataType": "string",
+            "sourceColumn": "CDBIMESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Bimestre",
+            "dataType": "string",
+            "sourceColumn": "DEBIMESTRE",
+            "sortByColumn": "Bimestre",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Trimestre",
+            "dataType": "string",
+            "sourceColumn": "CDTRIMESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Trimestre",
+            "dataType": "string",
+            "sourceColumn": "DETRIMESTRE",
+            "sortByColumn": "Trimestre",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Quadrimestre",
+            "dataType": "string",
+            "sourceColumn": "CDQUADRIMESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Quadrimestre",
+            "dataType": "string",
+            "sourceColumn": "DEQUADRIMESTRE",
+            "sortByColumn": "Quadrimestre",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Semestre",
+            "dataType": "string",
+            "sourceColumn": "CDSEMESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Semestre",
+            "dataType": "string",
+            "sourceColumn": "DESEMESTRE",
+            "sortByColumn": "Semestre",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dTempo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select *",
+                "",
+                "from\tdtempo",
+                "",
+                "where\texists",
+                "\t(",
+                "\tselect",
+                "\ttop 1 1",
+                "",
+                "\tfrom\tfacidentetransito",
+                "",
+                "\twhere\tleft ( facidentetransito.iddtboletim, 4 ) = dtempo.cdano",
+                "\t)"
+              ],
+              "dataSource": "SqlServer localhost TCC_DWH"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select *",
+                  "",
+                  "from\tdtempo",
+                  "",
+                  "where\texists",
+                  "\t(",
+                  "\tselect",
+                  "\ttop 1 1",
+                  "",
+                  "\tfrom\tfacidentetransito",
+                  "",
+                  "\twhere\tleft ( facidentetransito.iddtboletim, 4 ) = dtempo.cdano",
+                  "\t)</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select *",
+              "",
+              "from\tdtempo",
+              "",
+              "where\texists",
+              "\t(",
+              "\tselect",
+              "\ttop 1 1",
+              "",
+              "\tfrom\tfacidentetransito",
+              "",
+              "\twhere\tleft ( facidentetransito.iddtboletim, 4 ) = dtempo.cdano",
+              "\t)"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dTempo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select *",
+              "",
+              "from\tdtempo",
+              "",
+              "where\texists",
+              "\t(",
+              "\tselect",
+              "\ttop 1 1",
+              "",
+              "\tfrom\tfacidentetransito",
+              "",
+              "\twhere\tleft ( facidentetransito.iddtboletim, 4 ) = dtempo.cdano",
+              "\t)</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "dTipoAcidente",
+        "columns": [
+          {
+            "name": "IDTIPOACIDENTE",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDTIPOACIDENTE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Tipo Acidente",
+            "dataType": "string",
+            "sourceColumn": "CDTIPOACIDENTE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Tipo Acidente",
+            "dataType": "string",
+            "sourceColumn": "DETIPOACIDENTE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dTipoAcidente",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": "SELECT [dbo].[dTipoAcidente].[IDTIPOACIDENTE],[dbo].[dTipoAcidente].[CDTIPOACIDENTE],[dbo].[dTipoAcidente].[DETIPOACIDENTE],[dbo].[dTipoAcidente].[DTCARGA] FROM [dbo].[dTipoAcidente]",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [dbo].[dTipoAcidente].[IDTIPOACIDENTE],[dbo].[dTipoAcidente].[CDTIPOACIDENTE],[dbo].[dTipoAcidente].[DETIPOACIDENTE],[dbo].[dTipoAcidente].[DTCARGA] FROM [dbo].[dTipoAcidente]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": "SELECT [dbo].[dTipoAcidente].[IDTIPOACIDENTE],[dbo].[dTipoAcidente].[CDTIPOACIDENTE],[dbo].[dTipoAcidente].[DETIPOACIDENTE],[dbo].[dTipoAcidente].[DTCARGA] FROM [dbo].[dTipoAcidente]"
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dTipoAcidente"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [dbo].[dTipoAcidente].[IDTIPOACIDENTE],[dbo].[dTipoAcidente].[CDTIPOACIDENTE],[dbo].[dTipoAcidente].[DETIPOACIDENTE],[dbo].[dTipoAcidente].[DTCARGA] FROM [dbo].[dTipoAcidente]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+          }
+        ]
+      },
+      {
+        "name": "dTipoVeiculo",
+        "columns": [
+          {
+            "name": "IDTIPOVEICULO",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDTIPOVEICULO",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Tipo Veículo",
+            "dataType": "string",
+            "sourceColumn": "CDTIPOVEICULO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Tipo Veículo",
+            "dataType": "string",
+            "sourceColumn": "DETIPOVEICULO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dTipoVeiculo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dTipoVeiculo].* FROM [dbo].[dTipoVeiculo] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dTipoVeiculo].* FROM [dbo].[dTipoVeiculo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dTipoVeiculo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dVelocidadePermitida",
+        "columns": [
+          {
+            "name": "IDVELOCIDADEPERMITIDA",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDVELOCIDADEPERMITIDA",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Código Velocidade Permitida",
+            "dataType": "int64",
+            "sourceColumn": "CDVELOCIDADEPERMITIDA",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Velocidade Permitida",
+            "dataType": "string",
+            "sourceColumn": "DEVELOCIDADEPERMITIDA",
+            "sortByColumn": "Código Velocidade Permitida",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dVelocidadePermitida",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dVelocidadePermitida].* FROM [dbo].[dVelocidadePermitida] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dVelocidadePermitida].* FROM [dbo].[dVelocidadePermitida] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dVelocidadePermitida"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dTempoInclusao",
+        "columns": [
+          {
+            "name": "IDDATA",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "IDDATA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data",
+            "dataType": "dateTime",
+            "sourceColumn": "DATA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Ano",
+            "dataType": "int64",
+            "sourceColumn": "CDANO",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Mês",
+            "dataType": "int64",
+            "sourceColumn": "CDMES",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Descrição Mês",
+            "dataType": "string",
+            "sourceColumn": "DEMES",
+            "sortByColumn": "Mês",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Abreviação Mês",
+            "dataType": "string",
+            "sourceColumn": "DEMESABV",
+            "sortByColumn": "Mês",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dia",
+            "dataType": "int64",
+            "sourceColumn": "CDDIA",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Período",
+            "dataType": "string",
+            "sourceColumn": "CDPERIODO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Período",
+            "dataType": "string",
+            "sourceColumn": "DEPERIODO",
+            "sortByColumn": "Período",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dia Semana",
+            "dataType": "int64",
+            "sourceColumn": "CDDIASEMANA",
+            "sourceProviderType": "Integer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Descrição Dia Semana",
+            "dataType": "string",
+            "sourceColumn": "DEDIASEMANA",
+            "sortByColumn": "Dia Semana",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Abreviação Dia Semana",
+            "dataType": "string",
+            "sourceColumn": "DEDIASEMANAABV",
+            "sortByColumn": "Dia Semana",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Flag Fim de Semana",
+            "dataType": "string",
+            "sourceColumn": "FLFIMSEMANA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Flag Dia de Semana",
+            "dataType": "string",
+            "sourceColumn": "FLDIASEMANA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Flag Feriado",
+            "dataType": "string",
+            "sourceColumn": "FLFERIADO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Bimestre",
+            "dataType": "string",
+            "sourceColumn": "CDBIMESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Bimestre",
+            "dataType": "string",
+            "sourceColumn": "DEBIMESTRE",
+            "sortByColumn": "Bimestre",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Trimestre",
+            "dataType": "string",
+            "sourceColumn": "CDTRIMESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Trimestre",
+            "dataType": "string",
+            "sourceColumn": "DETRIMESTRE",
+            "sortByColumn": "Trimestre",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Quadrimestre",
+            "dataType": "string",
+            "sourceColumn": "CDQUADRIMESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Quadrimestre",
+            "dataType": "string",
+            "sourceColumn": "DEQUADRIMESTRE",
+            "sortByColumn": "Quadrimestre",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Semestre",
+            "dataType": "string",
+            "sourceColumn": "CDSEMESTRE",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Descrição Semestre",
+            "dataType": "string",
+            "sourceColumn": "DESEMESTRE",
+            "sortByColumn": "Semestre",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dTempoInclusao",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select *",
+                "",
+                "from\tdtempo",
+                "",
+                "where\texists",
+                "\t(",
+                "\tselect",
+                "\ttop 1 1",
+                "",
+                "\tfrom\tfacidentetransito",
+                "",
+                "\twhere\tleft ( facidentetransito.iddtinclusao, 4 ) = dtempo.cdano",
+                "\t)"
+              ],
+              "dataSource": "SqlServer localhost TCC_DWH"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select *",
+                  "",
+                  "from\tdtempo",
+                  "",
+                  "where\texists",
+                  "\t(",
+                  "\tselect",
+                  "\ttop 1 1",
+                  "",
+                  "\tfrom\tfacidentetransito",
+                  "",
+                  "\twhere\tleft ( facidentetransito.iddtinclusao, 4 ) = dtempo.cdano",
+                  "\t)</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select *",
+              "",
+              "from\tdtempo",
+              "",
+              "where\texists",
+              "\t(",
+              "\tselect",
+              "\ttop 1 1",
+              "",
+              "\tfrom\tfacidentetransito",
+              "",
+              "\twhere\tleft ( facidentetransito.iddtinclusao, 4 ) = dtempo.cdano",
+              "\t)"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dTempo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select *",
+              "",
+              "from\tdtempo",
+              "",
+              "where\texists",
+              "\t(",
+              "\tselect",
+              "\ttop 1 1",
+              "",
+              "\tfrom\tfacidentetransito",
+              "",
+              "\twhere\tleft ( facidentetransito.iddtinclusao, 4 ) = dtempo.cdano",
+              "\t)</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "dHora",
+        "columns": [
+          {
+            "name": "IDHORA",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IDHORA",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Hora",
+            "dataType": "string",
+            "sourceColumn": "CDHORA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Minuto",
+            "dataType": "string",
+            "sourceColumn": "CDMINUTO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Segundo",
+            "dataType": "string",
+            "sourceColumn": "CDSEGUNDO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Hora Completa",
+            "dataType": "string",
+            "sourceColumn": "DEHORACOMPLETA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Período",
+            "dataType": "string",
+            "sourceColumn": "DEPERIODODIA",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Data Carga",
+            "dataType": "dateTime",
+            "sourceColumn": "DTCARGA",
+            "formatString": "dd/MM/yyyy HH:mm:ss",
+            "sourceProviderType": "DBTimeStamp",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1046\" Group=\"GeneralLongDateTime\" FormatString=\"dd/MM/yyyy HH:mm:ss\" /></DateTimes></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dHora",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dHora].* FROM [dbo].[dHora] ",
+              "dataSource": "SqlServer localhost TCC_DWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dHora].* FROM [dbo].[dHora] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dHora"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "bad840d0-a248-4bc6-b067-2dcbcd365851",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idcategoriahabilitacao",
+        "toTable": "dCategoriaHabilitacao",
+        "toColumn": "idcategoriahabilitacao",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "288ff040-702d-422e-bb27-69ce40c267f5",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idsexo",
+        "toTable": "dSexo",
+        "toColumn": "idsexo",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "1c2b937e-0eee-441d-82bc-a317ac074e8c",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idboletim",
+        "toTable": "dBoletim",
+        "toColumn": "idboletim",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "25b4e491-6c75-496c-afcc-c7d6f447f9bd",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idcondtempo",
+        "toTable": "dCondTempo",
+        "toColumn": "IDCONDTEMPO",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "86e2da8b-ccaa-4822-97d5-bca02b648334",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idflagcintoseguranca",
+        "toTable": "dFlagCintoSeguranca",
+        "toColumn": "IDFLAGCINTOSEGURANCA",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "2f9147d9-1f8e-4e1f-b45f-782f7207edf2",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idflagcondutor",
+        "toTable": "dFlagCondutor",
+        "toColumn": "IDFLAGCONDUTOR",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "9ddc185e-2da8-4337-8954-34e34e2b5177",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idflagembriaguez",
+        "toTable": "dFlagEmbriaguez",
+        "toColumn": "IDFLAGEMBRIAGUEZ",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "813e85a7-2432-4119-9024-860af1c34d62",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idflagfatalidade",
+        "toTable": "dFlagFatalidade",
+        "toColumn": "IDFLAGFATALIDADE",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "932f7ca4-c7a5-402e-9782-617db49b27e2",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idflaglocalsinalizado",
+        "toTable": "dFlagLocalSinalizado",
+        "toColumn": "IDFLAGLOCALSINALIZADO",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "86798eca-8fa5-40a1-b8d3-2faea247fbbe",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idflagpassageiro",
+        "toTable": "dFlagPassageiro",
+        "toColumn": "IDFLAGPASSAGEIRO",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "6c6e5aec-4806-433e-84cb-21adb14e769f",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idflagpedestre",
+        "toTable": "dFlagPedestre",
+        "toColumn": "IDFLAGPEDESTRE",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "7418ad36-e732-4fd2-8368-d5fd25805668",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "ididade",
+        "toTable": "dIdade",
+        "toColumn": "IDIDADE",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "c64a894b-2b99-4f11-a559-03bea05b1759",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idpavimento",
+        "toTable": "dPavimento",
+        "toColumn": "IDPAVIMENTO",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "ce29e17e-5145-4630-affe-9ae124cfe6c5",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idregional",
+        "toTable": "dRegional",
+        "toColumn": "IDREGIONAL",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "a0b3465a-bae8-47ab-bf03-11ac9c1082c9",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idorigemboletim",
+        "toTable": "dOrigemBoletim",
+        "toColumn": "IDORIGEMBOLETIM",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "e24a082b-66da-41ae-bad6-b3c00e6b5472",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idseveridade",
+        "toTable": "dSeveridade",
+        "toColumn": "IDSEVERIDADE",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "b88e550a-b41a-4203-ad2d-999bef21b1b3",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idtipoacidente",
+        "toTable": "dTipoAcidente",
+        "toColumn": "IDTIPOACIDENTE",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "16fef571-98e6-482c-8d81-4799f0e0e7b1",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idvelocidadepermitida",
+        "toTable": "dVelocidadePermitida",
+        "toColumn": "IDVELOCIDADEPERMITIDA",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "0fd7ddad-b887-4bb2-88d1-12272b045eb1",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "iddtboletim",
+        "toTable": "dTempoBoletim",
+        "toColumn": "IDDATA",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "9d998bdb-372d-4d4f-8113-fdda75177a7a",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "iddtinclusao",
+        "toTable": "dTempoInclusao",
+        "toColumn": "IDDATA",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "5a4b12b6-db13-43c6-8527-7a74e5aa2385",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idtipoveiculo",
+        "toTable": "dTipoVeiculo",
+        "toColumn": "IDTIPOVEICULO",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "edf3b465-3a96-4832-8456-5144eecf9053",
+        "fromTable": "fAcidenteTransito",
+        "fromColumn": "idhrboletim",
+        "toTable": "dHora",
+        "toColumn": "IDHORA",
+        "crossFilteringBehavior": "bothDirections"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

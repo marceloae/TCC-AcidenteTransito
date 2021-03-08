@@ -1,0 +1,1383 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2021 10:19:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{75A88522-354E-4877-BDF2-19078ED4F663}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PCT_STG_ENV_AT"
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{07614496-76CF-45AF-ADEC-B7E8F0FFB819}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{05E95983-A0C4-4E3F-97B7-C9761FB2629C}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TCC_STG;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A318BF10-9981-4247-A523-45623638504E}"
+      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\marcelo.eugenio\OneDrive\Pessoal\Conhecimento\PUC - Pós BI &amp; Analytics\TCC\Dados\si_env_2019.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="num_boletim"
+              DTS:DTSID="{3DF39A90-A6F6-4440-9954-666E124B9D1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" data_hora_boletim"
+              DTS:DTSID="{05AB40AD-EB25-4FCE-A349-0B583C07F620}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Nº_envolvido"
+              DTS:DTSID="{5E933F85-3F1C-4FA0-9791-EB951964C480}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" condutor"
+              DTS:DTSID="{CF0B06E7-A5F5-4B66-B4A6-4E6D69A9AE20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" cod_severidade"
+              DTS:DTSID="{A17F59C1-DABE-4FAF-90AD-03190F7352CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" desc_severidade"
+              DTS:DTSID="{0F649E9C-745C-441C-BC61-CA6AFE05513C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" sexo"
+              DTS:DTSID="{01DF9E5C-B649-4FDF-B164-5EFF20FCDA37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" cinto_seguranca"
+              DTS:DTSID="{FEFDB208-58B6-4BA5-98FB-2EB7FDFA84CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Embreagues"
+              DTS:DTSID="{012402A0-22FF-40D1-9CCF-04E2489BAFA7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Idade"
+              DTS:DTSID="{8712D35D-1A6F-4AB0-82C5-572AE519C168}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" nascimento"
+              DTS:DTSID="{D617308C-25C6-4E21-8A1A-30EDFDA12635}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" categoria_habilitacao"
+              DTS:DTSID="{701D597F-CC1B-496C-A693-1782695C0995}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" descricao_habilitacao"
+              DTS:DTSID="{1DCCFCF1-FC8D-46C0-9916-92A72046C546}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" declaracao_obito"
+              DTS:DTSID="{13C57DD5-67F3-4EB4-8AAF-770306199EE0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" cod_severidade_antiga"
+              DTS:DTSID="{ADD95A85-8259-4318-A64E-B418F1F70BB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="especie_veiculo"
+              DTS:DTSID="{AEEBCC44-928D-4465-8187-C77E29E67F6C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" pedestre"
+              DTS:DTSID="{6988503C-056B-40EC-B4D5-1EF3607B0BE5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" passageiro"
+              DTS:DTSID="{80CAAD69-ACEB-4635-A874-B9631E9AA7B1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Tabela STG_ENV_AT"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{93C45290-C6C0-4B48-AF66-D7FCD3675574}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Tabela STG_ENV_AT"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino STG_ENV_AT"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[STG_ENV_AT]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[nuboletim]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nuboletim"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUBOLETIM]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[nuboletim]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[dtboletim]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="dtboletim"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTBOLETIM]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtboletim]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[qtenvolvido]"
+                      cachedDataType="i4"
+                      cachedName="qtenvolvido"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTENVOLVIDO]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[qtenvolvido]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[flcondutor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="flcondutor"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLCONDUTOR]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flcondutor]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[cdseveridade]"
+                      cachedDataType="i4"
+                      cachedName="cdseveridade"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[CDSEVERIDADE]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdseveridade]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[deseveridade]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="deseveridade"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DESEVERIDADE]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[deseveridade]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[cdsexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cdsexo"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[CDSEXO]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdsexo]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[flcintoseguranca]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="flcintoseguranca"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLCINTOSEGURANCA]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flcintoseguranca]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[flembreagues]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="flembreagues"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLEMBREAGUES]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flembreagues]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[idade]"
+                      cachedDataType="i4"
+                      cachedName="idade"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDADE]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[idade]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[dtnascimento]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="dtnascimento"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTNASCIMENTO]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtnascimento]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[cdcategoriahabilitacao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="cdcategoriahabilitacao"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[CDCATEGORIAHABILITACAO]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdcategoriahabilitacao]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[decategoriahabilitacao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="decategoriahabilitacao"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DECATEGORIAHABILITACAO]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[decategoriahabilitacao]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[detipoveiculo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="detipoveiculo"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DETIPOVEICULO]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[detipoveiculo]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[flpedestre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="flpedestre"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLPEDESTRE]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flpedestre]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[flpassageiro]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="flpassageiro"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLPASSAGEIRO]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flpassageiro]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].Columns[dtcarga]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="dtcarga"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTCARGA]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtcarga]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUBOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUBOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTBOLETIM]"
+                      dataType="dbTimeStamp"
+                      name="DTBOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTENVOLVIDO]"
+                      dataType="i4"
+                      name="QTENVOLVIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLCONDUTOR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FLCONDUTOR" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[CDSEVERIDADE]"
+                      dataType="i4"
+                      name="CDSEVERIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DESEVERIDADE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DESEVERIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[CDSEXO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CDSEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLCINTOSEGURANCA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FLCINTOSEGURANCA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLEMBREAGUES]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FLEMBREAGUES" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDADE]"
+                      dataType="i4"
+                      name="IDADE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTNASCIMENTO]"
+                      dataType="dbTimeStamp"
+                      name="DTNASCIMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[CDCATEGORIAHABILITACAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="CDCATEGORIAHABILITACAO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DECATEGORIAHABILITACAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DECATEGORIAHABILITACAO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DETIPOVEICULO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DETIPOVEICULO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLPEDESTRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FLPEDESTRE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[FLPASSAGEIRO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FLPASSAGEIRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDREG]"
+                      dataType="i4"
+                      name="IDREG" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTCARGA]"
+                      dataType="dbTimeStamp"
+                      name="DTCARGA" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="Origem STG_ENV_AT"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+stg_si_env_2017.num_boletim			as 'nuboletim',
+convert ( datetime, replace ( left ( stg_si_env_2017.data_hora_boletim, 10 ), '-', '' ) + ' ' + substring ( stg_si_env_2017.data_hora_boletim, charindex ( ' ', stg_si_env_2017.data_hora_boletim ), len ( stg_si_env_2017.data_hora_boletim ) ) ) as 'dtboletim',
+convert ( int, stg_si_env_2017.num_envolvido )	as 'qtenvolvido',
+(
+case
+	when	stg_si_env_2017.condutor = 'n'
+	then	0
+
+	when	stg_si_env_2017.condutor = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flcondutor',
+convert ( int, stg_si_env_2017.cod_severidade )	as 'cdseveridade',
+stg_si_env_2017.desc_severidade			as 'deseveridade',
+(
+case
+	when	stg_si_env_2017.sexo = 'f'
+	then	0
+	
+	when	stg_si_env_2017.sexo = 'm'
+	then	1
+
+	else	-1
+end
+)						as 'cdsexo',
+(
+case
+	when	stg_si_env_2017.cinto_seguranca = 'não'
+	then	0
+
+	when	stg_si_env_2017.cinto_seguranca = 'sim'
+	then	1
+	
+	else	-1
+end
+)						as 'flcintoseguranca',
+(
+case
+	when	stg_si_env_2017.embreagues = 'não'
+	then	'0'
+
+	when	stg_si_env_2017.embreagues = 'sim'
+	then	'1'
+
+	else	'-1'
+end
+)						as 'flembreagues',
+convert ( int, stg_si_env_2017.idade )		as 'idade',
+(
+case
+	when	isdate ( stg_si_env_2017.nascimento ) &lt;&gt; 1
+	then	null
+	else	convert ( datetime, stg_si_env_2017.nascimento )
+end
+) as 'dtnascimento',
+stg_si_env_2017.categoria_habilitacao		as 'cdcategoriahabilitacao',
+stg_si_env_2017.descricao_habilitacao		as 'decategoriahabilitacao',
+stg_si_env_2017.especie_veiculo			as 'detipoveiculo',
+(
+case
+	when	stg_si_env_2017.pedestre = 'n'
+	then	0
+
+	when	stg_si_env_2017.pedestre = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flpedestre',
+(
+case
+	when	stg_si_env_2017.passageiro = 'n'
+	then	0
+
+	when	stg_si_env_2017.passageiro = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flpassageiro',
+getdate()					as 'dtcarga'
+
+from	stg_si_env_2017
+
+union all
+
+select
+stg_si_env_2018.num_boletim			as 'nuboletim',
+convert ( datetime, replace ( left ( stg_si_env_2018.data_hora_boletim, 10 ), '-', '' ) + ' ' + substring ( stg_si_env_2018.data_hora_boletim, charindex ( ' ', stg_si_env_2018.data_hora_boletim ), len ( stg_si_env_2018.data_hora_boletim ) ) ) as 'dtboletim',
+convert ( int, stg_si_env_2018.num_envolvido )	as 'qtenvolvido',
+(
+case
+	when	stg_si_env_2018.condutor = 'n'
+	then	0
+
+	when	stg_si_env_2018.condutor = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flcondutor',
+convert ( int, stg_si_env_2018.cod_severidade )	as 'cdseveridade',
+stg_si_env_2018.desc_severidade			as 'deseveridade',
+(
+case
+	when	stg_si_env_2018.sexo = 'f'
+	then	0
+	
+	when	stg_si_env_2018.sexo = 'm'
+	then	1
+
+	else	-1
+end
+)						as 'cdsexo',
+(
+case
+	when	stg_si_env_2018.embreagues = 'não'
+	then	'0'
+
+	when	stg_si_env_2018.embreagues = 'sim'
+	then	'1'
+
+	else	'-1'
+end
+)						as 'flembreagues',
+stg_si_env_2018.embreagues			as 'flembreagues',
+convert ( int, stg_si_env_2018.idade )		as 'idade',
+(
+case
+	when	isdate ( stg_si_env_2018.nascimento ) &lt;&gt; 1
+	then	null
+	else	convert ( datetime, stg_si_env_2018.nascimento )
+end
+) as 'dtnascimento',
+stg_si_env_2018.categoria_habilitacao		as 'cdcategoriahabilitacao',
+stg_si_env_2018.descricao_habilitacao		as 'decategoriahabilitacao',
+stg_si_env_2018.especie_veiculo			as 'detipoveiculo',
+(
+case
+	when	stg_si_env_2018.pedestre = 'n'
+	then	0
+
+	when	stg_si_env_2018.pedestre = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flpedestre',
+(
+case
+	when	stg_si_env_2018.passageiro = 'n'
+	then	0
+
+	when	stg_si_env_2018.passageiro = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flpassageiro',
+getdate()					as 'dtcarga'
+
+from	stg_si_env_2018
+
+union all
+
+select
+stg_si_env_2019.num_boletim			as 'nuboletim',
+convert ( datetime, replace ( left ( stg_si_env_2019.data_hora_boletim, 10 ), '-', '' ) + ' ' + substring ( stg_si_env_2019.data_hora_boletim, charindex ( ' ', stg_si_env_2019.data_hora_boletim ), len ( stg_si_env_2019.data_hora_boletim ) ) ) as 'dtboletim',
+convert ( int, stg_si_env_2019.num_envolvido )	as 'qtenvolvido',
+(
+case
+	when	stg_si_env_2019.condutor = 'n'
+	then	0
+
+	when	stg_si_env_2019.condutor = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flcondutor',
+convert ( int, stg_si_env_2019.cod_severidade )	as 'cdseveridade',
+stg_si_env_2019.desc_severidade			as 'deseveridade',
+(
+case
+	when	stg_si_env_2019.sexo = 'f'
+	then	0
+	
+	when	stg_si_env_2019.sexo = 'm'
+	then	1
+
+	else	-1
+end
+)						as 'cdsexo',
+(
+case
+	when	stg_si_env_2019.cinto_seguranca = 'não'
+	then	0
+
+	when	stg_si_env_2019.cinto_seguranca = 'sim'
+	then	1
+	
+	else	-1
+end
+)						as 'flcintoseguranca',
+(
+case
+	when	stg_si_env_2019.embreagues = 'não'
+	then	'0'
+
+	when	stg_si_env_2019.embreagues = 'sim'
+	then	'1'
+
+	else	'-1'
+end
+)						as 'flembreagues',
+convert ( int, stg_si_env_2019.idade )		as 'idade',
+(
+case
+	when	isdate ( stg_si_env_2019.nascimento ) &lt;&gt; 1
+	then	null
+	else	convert ( datetime, stg_si_env_2019.nascimento )
+end
+) as 'dtnascimento',
+stg_si_env_2019.categoria_habilitacao		as 'cdcategoriahabilitacao',
+stg_si_env_2019.descricao_habilitacao		as 'decategoriahabilitacao',
+stg_si_env_2019.especie_veiculo			as 'detipoveiculo',
+(
+case
+	when	stg_si_env_2019.pedestre = 'n'
+	then	0
+
+	when	stg_si_env_2019.pedestre = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flpedestre',
+(
+case
+	when	stg_si_env_2019.passageiro = 'n'
+	then	0
+
+	when	stg_si_env_2019.passageiro = 's'
+	then	1
+
+	else	-1
+end
+)						as 'flpassageiro',
+getdate()					as 'dtcarga'
+
+from	stg_si_env_2019</property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[nuboletim]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[nuboletim]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[nuboletim]"
+                      name="nuboletim"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtboletim]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[dtboletim]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtboletim]"
+                      name="dtboletim"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[qtenvolvido]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[qtenvolvido]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[qtenvolvido]"
+                      name="qtenvolvido"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flcondutor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flcondutor]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flcondutor]"
+                      name="flcondutor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdseveridade]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[cdseveridade]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdseveridade]"
+                      name="cdseveridade"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[deseveridade]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[deseveridade]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[deseveridade]"
+                      name="deseveridade"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdsexo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[cdsexo]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdsexo]"
+                      name="cdsexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flcintoseguranca]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flcintoseguranca]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flcintoseguranca]"
+                      name="flcintoseguranca"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flembreagues]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flembreagues]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flembreagues]"
+                      name="flembreagues"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[idade]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[idade]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[idade]"
+                      name="idade"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtnascimento]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[dtnascimento]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtnascimento]"
+                      name="dtnascimento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdcategoriahabilitacao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[cdcategoriahabilitacao]"
+                      length="60"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[cdcategoriahabilitacao]"
+                      name="cdcategoriahabilitacao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[decategoriahabilitacao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[decategoriahabilitacao]"
+                      length="60"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[decategoriahabilitacao]"
+                      name="decategoriahabilitacao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[detipoveiculo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[detipoveiculo]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[detipoveiculo]"
+                      name="detipoveiculo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flpedestre]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flpedestre]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flpedestre]"
+                      name="flpedestre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flpassageiro]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flpassageiro]"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[flpassageiro]"
+                      name="flpassageiro"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtcarga]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[dtcarga]"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].Columns[dtcarga]"
+                      name="dtcarga"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[nuboletim]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="nuboletim" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[dtboletim]"
+                      dataType="dbTimeStamp"
+                      name="dtboletim" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[qtenvolvido]"
+                      dataType="i4"
+                      name="qtenvolvido" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flcondutor]"
+                      dataType="i4"
+                      name="flcondutor" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[cdseveridade]"
+                      dataType="i4"
+                      name="cdseveridade" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[deseveridade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="deseveridade" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[cdsexo]"
+                      dataType="i4"
+                      name="cdsexo" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flcintoseguranca]"
+                      dataType="i4"
+                      name="flcintoseguranca" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flembreagues]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="flembreagues" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[idade]"
+                      dataType="i4"
+                      name="idade" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[dtnascimento]"
+                      dataType="dbTimeStamp"
+                      name="dtnascimento" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[cdcategoriahabilitacao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="cdcategoriahabilitacao" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[decategoriahabilitacao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="decategoriahabilitacao" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[detipoveiculo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="detipoveiculo" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flpedestre]"
+                      dataType="i4"
+                      name="flpedestre" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[flpassageiro]"
+                      dataType="i4"
+                      name="flpassageiro" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB].ExternalColumns[dtcarga]"
+                      dataType="dbTimeStamp"
+                      name="dtcarga" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[nuboletim]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[nuboletim]"
+                      name="nuboletim" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[dtboletim]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[dtboletim]"
+                      name="dtboletim" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[qtenvolvido]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[qtenvolvido]"
+                      name="qtenvolvido" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flcondutor]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flcondutor]"
+                      name="flcondutor" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[cdseveridade]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[cdseveridade]"
+                      name="cdseveridade" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[deseveridade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[deseveridade]"
+                      name="deseveridade" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[cdsexo]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[cdsexo]"
+                      name="cdsexo" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flcintoseguranca]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flcintoseguranca]"
+                      name="flcintoseguranca" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flembreagues]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flembreagues]"
+                      name="flembreagues" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[idade]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[idade]"
+                      name="idade" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[dtnascimento]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[dtnascimento]"
+                      name="dtnascimento" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[cdcategoriahabilitacao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[cdcategoriahabilitacao]"
+                      name="cdcategoriahabilitacao" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[decategoriahabilitacao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[decategoriahabilitacao]"
+                      name="decategoriahabilitacao" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[detipoveiculo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[detipoveiculo]"
+                      name="detipoveiculo" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flpedestre]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flpedestre]"
+                      name="flpedestre" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flpassageiro]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[flpassageiro]"
+                      name="flpassageiro" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[dtcarga]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[dtcarga]"
+                      name="dtcarga" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga Tabela STG_ENV_AT.Paths[Saída de Origem OLE DB]"
+              endId="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT.Inputs[Entrada de Destino OLE DB]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT.Outputs[Saída de Origem OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Deleta Tabela STG_ENV_AT"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{6C32643B-0A07-4100-AD46-DCC1FFFBED4C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Deleta Tabela STG_ENV_AT"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{05E95983-A0C4-4E3F-97B7-C9761FB2629C}"
+          SQLTask:SqlStatementSource="truncate table STG_ENV_AT" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{831E6DE9-D9B8-4591-A5AD-03488600F438\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{831E6DE9-D9B8-4591-A5AD-03488600F438}"
+      DTS:From="Package\Deleta Tabela STG_ENV_AT"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{831E6DE9-D9B8-4591-A5AD-03488600F438}"
+      DTS:To="Package\Carga Tabela STG_ENV_AT" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="208,42.6666666666667"
+          Id="Package\Carga Tabela STG_ENV_AT"
+          TopLeft="31.3333329483867,131.999999573827" />
+        <NodeLayout
+          Size="210.666666666667,42.6666666666667"
+          Id="Package\Deleta Tabela STG_ENV_AT"
+          TopLeft="31.3333329483867,29.3333329071602" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{831E6DE9-D9B8-4591-A5AD-03488600F438\}]"
+          TopLeft="135.999999615053,71.9999995738269">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carga Tabela STG_ENV_AT">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="181.333333333334,42.6666666666667"
+          Id="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT"
+          TopLeft="93.7499986030162,37.8333330621322" />
+        <NodeLayout
+          Size="181.333333333334,42.6666666666667"
+          Id="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT"
+          TopLeft="93.7499986030162,124.799997768402" />
+        <EdgeLayout
+          Id="Package\Carga Tabela STG_ENV_AT.Paths[Saída de Origem OLE DB]"
+          TopLeft="184.416665269683,80.4999997287989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.2999980396032"
+              Start="0,0"
+              End="0,36.7999980396032">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.7999980396032" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Tabela STG_ENV_AT\Destino STG_ENV_AT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Tabela STG_ENV_AT\Origem STG_ENV_AT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

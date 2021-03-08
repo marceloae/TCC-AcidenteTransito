@@ -1,0 +1,1408 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2021 10:19:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{01E4E644-6584-4CD3-91DF-ADE76CF7DA86}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PCT_DWH_FACIDENTETRANSITO"
+  DTS:VersionBuild="60"
+  DTS:VersionGUID="{057AB497-CB77-436B-BFCD-0B971BC29339}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0C27B52E-55A9-41FE-9B65-2785FBCE5105}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TCC_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3301119A-386E-4272-8B91-DCEFB59ED8CE}"
+      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\marcelo.eugenio\OneDrive\Pessoal\Conhecimento\PUC - Pós BI &amp; Analytics\TCC\Dados\si_env_2019.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="num_boletim"
+              DTS:DTSID="{6E390E88-86C3-43D7-A019-DAC50F7EF6E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" data_hora_boletim"
+              DTS:DTSID="{3348A629-480E-4CEB-8C3E-B38A6FB4F7AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Nº_envolvido"
+              DTS:DTSID="{7322C7EA-DF00-465B-B92D-152D5778CA79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" condutor"
+              DTS:DTSID="{15456341-31A1-4ACD-A309-6E89DED352E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" cod_severidade"
+              DTS:DTSID="{8D4F2921-AA52-42ED-907D-9146C6FB3FB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" desc_severidade"
+              DTS:DTSID="{8D98AD6A-D407-4448-A21E-FD58B19E4FA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" sexo"
+              DTS:DTSID="{96F200E8-85E0-4B65-BBBD-B21F0C621A26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" cinto_seguranca"
+              DTS:DTSID="{0F0D448E-201E-44FA-B6FD-917A7AF6371D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Embreagues"
+              DTS:DTSID="{3D6D74A1-8A68-4D69-9B85-34F7BF53A242}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Idade"
+              DTS:DTSID="{07A46F16-5BD1-4B97-B387-D8943D5ED652}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" nascimento"
+              DTS:DTSID="{BD6C6B80-3A9F-4C52-BE34-C7CCB2D56D00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" categoria_habilitacao"
+              DTS:DTSID="{1A3D2904-DA87-4C94-BCEE-E842AB246E03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" descricao_habilitacao"
+              DTS:DTSID="{93473E59-60E8-4F73-AD13-DFBAACCD633F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" declaracao_obito"
+              DTS:DTSID="{E217737C-5C28-4F2F-845B-5660F5E70B36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" cod_severidade_antiga"
+              DTS:DTSID="{9BD4BFD8-6FC1-4489-A95E-121D2997FFCB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="especie_veiculo"
+              DTS:DTSID="{719A4A3C-99EA-41BB-808E-B6AA2574D5FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" pedestre"
+              DTS:DTSID="{20DCB379-12BD-4FB9-BC7C-6102014B3D2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" passageiro"
+              DTS:DTSID="{F8B48310-CD05-4822-8D29-AF356B9B19D2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Tabela FACIDENTETRANSITO"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{6B502A7C-58C1-455C-9A8A-C778B996E1D9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Tabela FACIDENTETRANSITO"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino FACIDENTETRANSITO"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[fAcidenteTransito]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[qtenvolvido]"
+                      cachedDataType="i4"
+                      cachedName="qtenvolvido"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTENVOLVIDO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[qtenvolvido]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[dtcarga]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="dtcarga"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTCARGA]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[dtcarga]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idboletim]"
+                      cachedDataType="i4"
+                      cachedName="idboletim"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDBOLETIM]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idboletim]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[iddtboletim]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="iddtboletim"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDDTBOLETIM]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[iddtboletim]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[iddtinclusao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="iddtinclusao"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDDTINCLUSAO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[iddtinclusao]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idflagcondutor]"
+                      cachedDataType="i4"
+                      cachedName="idflagcondutor"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGCONDUTOR]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagcondutor]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idseveridade]"
+                      cachedDataType="i4"
+                      cachedName="idseveridade"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDSEVERIDADE]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idseveridade]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idsexo]"
+                      cachedDataType="i4"
+                      cachedName="idsexo"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDSEXO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idsexo]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idflagcintoseguranca]"
+                      cachedDataType="i4"
+                      cachedName="idflagcintoseguranca"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGCINTOSEGURANCA]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagcintoseguranca]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idflagembriaguez]"
+                      cachedDataType="i4"
+                      cachedName="idflagembriaguez"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGEMBRIAGUEZ]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagembriaguez]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[ididade]"
+                      cachedDataType="i4"
+                      cachedName="ididade"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDIDADE]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[ididade]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idcategoriahabilitacao]"
+                      cachedDataType="i4"
+                      cachedName="idcategoriahabilitacao"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDCATEGORIAHABILITACAO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idcategoriahabilitacao]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idtipoveiculo]"
+                      cachedDataType="i4"
+                      cachedName="idtipoveiculo"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDTIPOVEICULO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idtipoveiculo]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idflagpedestre]"
+                      cachedDataType="i4"
+                      cachedName="idflagpedestre"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGPEDESTRE]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagpedestre]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idflagpassageiro]"
+                      cachedDataType="i4"
+                      cachedName="idflagpassageiro"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGPASSAGEIRO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagpassageiro]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idtipoacidente]"
+                      cachedDataType="i4"
+                      cachedName="idtipoacidente"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDTIPOACIDENTE]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idtipoacidente]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idcondtempo]"
+                      cachedDataType="i4"
+                      cachedName="idcondtempo"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDCONDTEMPO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idcondtempo]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idpavimento]"
+                      cachedDataType="i4"
+                      cachedName="idpavimento"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDPAVIMENTO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idpavimento]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idregional]"
+                      cachedDataType="i4"
+                      cachedName="idregional"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDREGIONAL]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idregional]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idorigemboletim]"
+                      cachedDataType="i4"
+                      cachedName="idorigemboletim"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDORIGEMBOLETIM]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idorigemboletim]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idflaglocalsinalizado]"
+                      cachedDataType="i4"
+                      cachedName="idflaglocalsinalizado"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGLOCALSINALIZADO]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflaglocalsinalizado]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idflagfatalidade]"
+                      cachedDataType="i4"
+                      cachedName="idflagfatalidade"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGFATALIDADE]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagfatalidade]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idvelocidadepermitida]"
+                      cachedDataType="i4"
+                      cachedName="idvelocidadepermitida"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDVELOCIDADEPERMITIDA]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idvelocidadepermitida]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[nucoordenadax]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nucoordenadax"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUCOORDENADAX]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[nucoordenadax]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[nucoordenaday]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nucoordenaday"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUCOORDENADAY]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[nucoordenaday]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[qtacidente]"
+                      cachedDataType="i4"
+                      cachedName="qtacidente"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTACIDENTE]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[qtacidente]" />
+                    <inputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].Columns[idhrboletim]"
+                      cachedDataType="i4"
+                      cachedName="idhrboletim"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDHRBOLETIM]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idhrboletim]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTENVOLVIDO]"
+                      dataType="i4"
+                      name="QTENVOLVIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDBOLETIM]"
+                      dataType="i4"
+                      name="IDBOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDDTBOLETIM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="IDDTBOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDDTINCLUSAO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="IDDTINCLUSAO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGCONDUTOR]"
+                      dataType="i4"
+                      name="IDFLAGCONDUTOR" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDSEVERIDADE]"
+                      dataType="i4"
+                      name="IDSEVERIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDSEXO]"
+                      dataType="i4"
+                      name="IDSEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGCINTOSEGURANCA]"
+                      dataType="i4"
+                      name="IDFLAGCINTOSEGURANCA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGEMBRIAGUEZ]"
+                      dataType="i4"
+                      name="IDFLAGEMBRIAGUEZ" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDIDADE]"
+                      dataType="i4"
+                      name="IDIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDCATEGORIAHABILITACAO]"
+                      dataType="i4"
+                      name="IDCATEGORIAHABILITACAO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDTIPOVEICULO]"
+                      dataType="i4"
+                      name="IDTIPOVEICULO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGPEDESTRE]"
+                      dataType="i4"
+                      name="IDFLAGPEDESTRE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGPASSAGEIRO]"
+                      dataType="i4"
+                      name="IDFLAGPASSAGEIRO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDTIPOACIDENTE]"
+                      dataType="i4"
+                      name="IDTIPOACIDENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDCONDTEMPO]"
+                      dataType="i4"
+                      name="IDCONDTEMPO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDPAVIMENTO]"
+                      dataType="i4"
+                      name="IDPAVIMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDREGIONAL]"
+                      dataType="i4"
+                      name="IDREGIONAL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDORIGEMBOLETIM]"
+                      dataType="i4"
+                      name="IDORIGEMBOLETIM" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGLOCALSINALIZADO]"
+                      dataType="i4"
+                      name="IDFLAGLOCALSINALIZADO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDFLAGFATALIDADE]"
+                      dataType="i4"
+                      name="IDFLAGFATALIDADE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDVELOCIDADEPERMITIDA]"
+                      dataType="i4"
+                      name="IDVELOCIDADEPERMITIDA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUCOORDENADAX]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUCOORDENADAX" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[NUCOORDENADAY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NUCOORDENADAY" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTACIDENTE]"
+                      dataType="i4"
+                      name="QTACIDENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[DTCARGA]"
+                      dataType="dbTimeStamp"
+                      name="DTCARGA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDHRBOLETIM]"
+                      dataType="i4"
+                      name="IDHRBOLETIM" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="Origem STG"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+isnull ( dboletim.idboletim, -1 )				as 'idboletim',
+isnull ( dtempo_dtbolitem.iddata, '19000101' )			as 'iddtboletim',
+isnull ( dhora.idhora, -1 )					as 'idhrboletim',
+isnull ( dtempo_dtinclusao.iddata, '19000101' )			as 'iddtinclusao',
+isnull ( dflagcondutor.idflagcondutor, -1 )			as 'idflagcondutor',
+isnull ( dseveridade.idseveridade, -1 )				as 'idseveridade',
+isnull ( dsexo.idsexo, -1 )					as 'idsexo',
+isnull ( dflagcintoseguranca.idflagcintoseguranca, -1 )		as 'idflagcintoseguranca',
+isnull ( dflagembriaguez.idflagembriaguez, -1 )			as 'idflagembriaguez',
+isnull ( didade.ididade, -1 )					as 'ididade',
+isnull ( dcategoriahabilitacao.idcategoriahabilitacao, -1 )	as 'idcategoriahabilitacao',
+isnull ( dtipoveiculo.idtipoveiculo, -1 )			as 'idtipoveiculo',
+isnull ( dflagpedestre.idflagpedestre, -1 )			as 'idflagpedestre',
+isnull ( dflagpassageiro.idflagpassageiro, -1 )			as 'idflagpassageiro',
+isnull ( dtipoacidente.idtipoacidente, -1 )			as 'idtipoacidente',
+isnull ( dcondtempo.idcondtempo, -1 )				as 'idcondtempo',
+isnull ( dpavimento.idpavimento, -1 )				as 'idpavimento',
+isnull ( dregional.idregional, -1 )				as 'idregional',
+isnull ( dorigemboletim.idorigemboletim, -1 )			as 'idorigemboletim',
+isnull ( dflaglocalsinalizado.idflaglocalsinalizado, -1 )	as 'idflaglocalsinalizado',
+isnull ( dflagfatalidade.idflagfatalidade, -1 )			as 'idflagfatalidade',
+isnull ( dvelocidadepermitida.idvelocidadepermitida, -1 )	as 'idvelocidadepermitida',
+stg_bol_at.nucoordenadax,
+stg_bol_at.nucoordenaday,
+1								as 'qtacidente',
+1								as 'qtenvolvido',
+getdate()							as 'dtcarga'
+
+from		tcc_stg.dbo.stg_env_at
+left outer join	tcc_dwh.dbo.dboletim			on ( dboletim.cdboletim					= stg_env_at.nuboletim )
+left outer join	tcc_stg.dbo.stg_bol_at			on ( stg_bol_at.nuboletim				= stg_env_at.nuboletim )
+left outer join	tcc_dwh.dbo.dtempo dtempo_dtbolitem	on ( dtempo_dtbolitem.data				= convert ( date, stg_bol_at.dtboletim ) )
+left outer join	tcc_dwh.dbo.dtempo dtempo_dtinclusao	on ( dtempo_dtinclusao.data				= convert ( date, stg_bol_at.dtinclusao ) )
+left outer join	tcc_dwh.dbo.dflagcondutor		on ( dflagcondutor.cdflagcondutor			= stg_env_at.flcondutor )
+left outer join	tcc_dwh.dbo.dseveridade			on ( dseveridade.cdseveridade				= stg_env_at.cdseveridade )
+left outer join	tcc_dwh.dbo.dsexo			on ( dsexo.cdsexo					= stg_env_at.cdsexo )
+left outer join	tcc_dwh.dbo.dflagcintoseguranca		on ( dflagcintoseguranca.cdflagcintoseguranca		= stg_env_at.flcintoseguranca )
+left outer join	tcc_dwh.dbo.dflagembriaguez		on ( dflagembriaguez.cdflagembriaguez			= stg_env_at.flembreagues )
+left outer join	tcc_dwh.dbo.didade			on ( didade.cdidade					= stg_env_at.idade )
+left outer join	tcc_dwh.dbo.dcategoriahabilitacao	on ( dcategoriahabilitacao.cdcategoriahabilitacao	= stg_env_at.cdcategoriahabilitacao )
+left outer join	tcc_dwh.dbo.dtipoveiculo		on ( dtipoveiculo.cdtipoveiculo				= stg_env_at.detipoveiculo )
+left outer join	tcc_dwh.dbo.dflagpedestre		on ( dflagpedestre.cdflagpedestre			= stg_env_at.flpedestre )
+left outer join	tcc_dwh.dbo.dflagpassageiro		on ( dflagpassageiro.cdflagpassageiro			= stg_env_at.flpassageiro )
+left outer join	tcc_dwh.dbo.dtipoacidente		on ( dtipoacidente.cdtipoacidente			= stg_bol_at.cdtipoacidente )
+left outer join	tcc_dwh.dbo.dcondtempo			on ( dcondtempo.cdcondtempo				= stg_bol_at.cdcondtempo )
+left outer join	tcc_dwh.dbo.dpavimento			on ( dpavimento.cdpavimento				= stg_bol_at.cdpavimento )
+left outer join	tcc_dwh.dbo.dregional			on ( dregional.cdregional				= stg_bol_at.cdregional )
+left outer join	tcc_dwh.dbo.dorigemboletim		on ( dorigemboletim.cdorigemboletim			= stg_bol_at.deorigemboletim )
+left outer join	tcc_dwh.dbo.dflaglocalsinalizado	on ( dflaglocalsinalizado.cdflaglocalsinalizado		= stg_bol_at.fllocalsinalizado )
+left outer join	tcc_dwh.dbo.dflagfatalidade		on ( dflagfatalidade.cdflagfatalidade			= stg_bol_at.flindicadorfatalidade )
+left outer join	tcc_dwh.dbo.dvelocidadepermitida	on ( dvelocidadepermitida.cdvelocidadepermitida		= stg_bol_at.velocidadepermitida )
+left outer join	tcc_dwh.dbo.dhora			on ( dhora.dehoracompleta				= substring ( convert ( varchar(19), stg_bol_at.dtboletim, 121 ), 12, 8 ) )</property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[qtenvolvido]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[qtenvolvido]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[qtenvolvido]"
+                      name="qtenvolvido"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[dtcarga]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[dtcarga]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[dtcarga]"
+                      name="dtcarga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idboletim]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idboletim]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idboletim]"
+                      name="idboletim"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[iddtboletim]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[iddtboletim]"
+                      length="10"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[iddtboletim]"
+                      name="iddtboletim"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[iddtinclusao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[iddtinclusao]"
+                      length="10"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[iddtinclusao]"
+                      name="iddtinclusao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagcondutor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagcondutor]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagcondutor]"
+                      name="idflagcondutor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idseveridade]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idseveridade]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idseveridade]"
+                      name="idseveridade"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idsexo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idsexo]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idsexo]"
+                      name="idsexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagcintoseguranca]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagcintoseguranca]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagcintoseguranca]"
+                      name="idflagcintoseguranca"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagembriaguez]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagembriaguez]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagembriaguez]"
+                      name="idflagembriaguez"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[ididade]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[ididade]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[ididade]"
+                      name="ididade"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idcategoriahabilitacao]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idcategoriahabilitacao]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idcategoriahabilitacao]"
+                      name="idcategoriahabilitacao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idtipoveiculo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idtipoveiculo]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idtipoveiculo]"
+                      name="idtipoveiculo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagpedestre]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagpedestre]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagpedestre]"
+                      name="idflagpedestre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagpassageiro]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagpassageiro]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagpassageiro]"
+                      name="idflagpassageiro"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idtipoacidente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idtipoacidente]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idtipoacidente]"
+                      name="idtipoacidente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idcondtempo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idcondtempo]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idcondtempo]"
+                      name="idcondtempo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idpavimento]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idpavimento]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idpavimento]"
+                      name="idpavimento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idregional]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idregional]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idregional]"
+                      name="idregional"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idorigemboletim]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idorigemboletim]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idorigemboletim]"
+                      name="idorigemboletim"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflaglocalsinalizado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflaglocalsinalizado]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflaglocalsinalizado]"
+                      name="idflaglocalsinalizado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagfatalidade]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagfatalidade]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idflagfatalidade]"
+                      name="idflagfatalidade"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idvelocidadepermitida]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idvelocidadepermitida]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idvelocidadepermitida]"
+                      name="idvelocidadepermitida"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[nucoordenadax]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[nucoordenadax]"
+                      length="50"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[nucoordenadax]"
+                      name="nucoordenadax"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[nucoordenaday]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[nucoordenaday]"
+                      length="50"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[nucoordenaday]"
+                      name="nucoordenaday"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[qtacidente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[qtacidente]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[qtacidente]"
+                      name="qtacidente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idhrboletim]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idhrboletim]"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].Columns[idhrboletim]"
+                      name="idhrboletim"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[qtenvolvido]"
+                      dataType="i4"
+                      name="qtenvolvido" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[dtcarga]"
+                      dataType="dbTimeStamp"
+                      name="dtcarga" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idboletim]"
+                      dataType="i4"
+                      name="idboletim" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[iddtboletim]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="iddtboletim" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[iddtinclusao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="iddtinclusao" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagcondutor]"
+                      dataType="i4"
+                      name="idflagcondutor" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idseveridade]"
+                      dataType="i4"
+                      name="idseveridade" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idsexo]"
+                      dataType="i4"
+                      name="idsexo" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagcintoseguranca]"
+                      dataType="i4"
+                      name="idflagcintoseguranca" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagembriaguez]"
+                      dataType="i4"
+                      name="idflagembriaguez" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[ididade]"
+                      dataType="i4"
+                      name="ididade" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idcategoriahabilitacao]"
+                      dataType="i4"
+                      name="idcategoriahabilitacao" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idtipoveiculo]"
+                      dataType="i4"
+                      name="idtipoveiculo" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagpedestre]"
+                      dataType="i4"
+                      name="idflagpedestre" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagpassageiro]"
+                      dataType="i4"
+                      name="idflagpassageiro" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idtipoacidente]"
+                      dataType="i4"
+                      name="idtipoacidente" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idcondtempo]"
+                      dataType="i4"
+                      name="idcondtempo" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idpavimento]"
+                      dataType="i4"
+                      name="idpavimento" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idregional]"
+                      dataType="i4"
+                      name="idregional" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idorigemboletim]"
+                      dataType="i4"
+                      name="idorigemboletim" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflaglocalsinalizado]"
+                      dataType="i4"
+                      name="idflaglocalsinalizado" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idflagfatalidade]"
+                      dataType="i4"
+                      name="idflagfatalidade" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idvelocidadepermitida]"
+                      dataType="i4"
+                      name="idvelocidadepermitida" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[nucoordenadax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="nucoordenadax" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[nucoordenaday]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="nucoordenaday" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[qtacidente]"
+                      dataType="i4"
+                      name="qtacidente" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB].ExternalColumns[idhrboletim]"
+                      dataType="i4"
+                      name="idhrboletim" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idboletim]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idboletim]"
+                      name="idboletim" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[iddtboletim]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[iddtboletim]"
+                      name="iddtboletim" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idhrboletim]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idhrboletim]"
+                      name="idhrboletim" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[iddtinclusao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[iddtinclusao]"
+                      name="iddtinclusao" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagcondutor]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagcondutor]"
+                      name="idflagcondutor" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idseveridade]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idseveridade]"
+                      name="idseveridade" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idsexo]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idsexo]"
+                      name="idsexo" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagcintoseguranca]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagcintoseguranca]"
+                      name="idflagcintoseguranca" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagembriaguez]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagembriaguez]"
+                      name="idflagembriaguez" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[ididade]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[ididade]"
+                      name="ididade" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idcategoriahabilitacao]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idcategoriahabilitacao]"
+                      name="idcategoriahabilitacao" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idtipoveiculo]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idtipoveiculo]"
+                      name="idtipoveiculo" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagpedestre]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagpedestre]"
+                      name="idflagpedestre" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagpassageiro]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagpassageiro]"
+                      name="idflagpassageiro" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idtipoacidente]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idtipoacidente]"
+                      name="idtipoacidente" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idcondtempo]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idcondtempo]"
+                      name="idcondtempo" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idpavimento]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idpavimento]"
+                      name="idpavimento" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idregional]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idregional]"
+                      name="idregional" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idorigemboletim]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idorigemboletim]"
+                      name="idorigemboletim" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflaglocalsinalizado]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflaglocalsinalizado]"
+                      name="idflaglocalsinalizado" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagfatalidade]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idflagfatalidade]"
+                      name="idflagfatalidade" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idvelocidadepermitida]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[idvelocidadepermitida]"
+                      name="idvelocidadepermitida" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[nucoordenadax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[nucoordenadax]"
+                      name="nucoordenadax" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[nucoordenaday]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[nucoordenaday]"
+                      name="nucoordenaday" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[qtacidente]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[qtacidente]"
+                      name="qtacidente" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[qtenvolvido]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[qtenvolvido]"
+                      name="qtenvolvido" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[dtcarga]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[dtcarga]"
+                      name="dtcarga" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga Tabela FACIDENTETRANSITO.Paths[Saída de Origem OLE DB]"
+              endId="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO.Inputs[Entrada de Destino OLE DB]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Carga Tabela FACIDENTETRANSITO\Origem STG.Outputs[Saída de Origem OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Deleta Tabela FACIDENTETRANSITO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{AA4D3A16-EDA6-482F-B982-C45ED8204D54}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Deleta Tabela FACIDENTETRANSITO"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0C27B52E-55A9-41FE-9B65-2785FBCE5105}"
+          SQLTask:SqlStatementSource="truncate table FACIDENTETRANSITO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{0F507F4B-9A8A-4B89-A398-7656C37D177A\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{0F507F4B-9A8A-4B89-A398-7656C37D177A}"
+      DTS:From="Package\Deleta Tabela FACIDENTETRANSITO"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{0F507F4B-9A8A-4B89-A398-7656C37D177A}"
+      DTS:To="Package\Carga Tabela FACIDENTETRANSITO" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="250.666666666667,42.6666666666667"
+          Id="Package\Carga Tabela FACIDENTETRANSITO"
+          TopLeft="31.3333329483867,131.999999573827" />
+        <NodeLayout
+          Size="253.333333333334,42.6666666666667"
+          Id="Package\Deleta Tabela FACIDENTETRANSITO"
+          TopLeft="31.3333329483867,29.3333329071602" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{0F507F4B-9A8A-4B89-A398-7656C37D177A\}]"
+          TopLeft="157.333332948387,71.9999995738269">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carga Tabela FACIDENTETRANSITO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="222.666666666667,42.6666666666667"
+          Id="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO"
+          TopLeft="93.7499986030162,112.66666465203" />
+        <NodeLayout
+          Size="222.666666666667,42.6666666666667"
+          Id="Package\Carga Tabela FACIDENTETRANSITO\Origem STG"
+          TopLeft="93.7499986030162,37.8333330621322" />
+        <EdgeLayout
+          Id="Package\Carga Tabela FACIDENTETRANSITO.Paths[Saída de Origem OLE DB]"
+          TopLeft="205.08333193635,80.4999997287989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.1666649232309"
+              Start="0,0"
+              End="0,24.6666649232309">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.6666649232309" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Tabela FACIDENTETRANSITO\Destino FACIDENTETRANSITO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Tabela FACIDENTETRANSITO\Origem STG">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

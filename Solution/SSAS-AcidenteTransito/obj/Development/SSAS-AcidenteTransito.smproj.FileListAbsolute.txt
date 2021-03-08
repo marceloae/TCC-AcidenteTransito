@@ -1,0 +1,7 @@
+C:\Users\marcelo.eugenio\source\repos\TCC\SSAS-AcidenteTransito\bin\Model.asdatabase
+C:\Users\marcelo.eugenio\source\repos\TCC\SSAS-AcidenteTransito\bin\Model.deploymenttargets
+C:\Users\marcelo.eugenio\source\repos\TCC\SSAS-AcidenteTransito\bin\Model.deploymentoptions
+C:\Users\marcelo.eugenio\source\repos\TCC\SSAS-AcidenteTransito\obj\Development\SSAS-AcidenteTransito.smproj.CoreCompileInputs.cache
+C:\Users\marcelo.eugenio\source\repos\TCC\SSAS-AcidenteTransito\obj\Development\Model.asdatabase
+C:\Users\marcelo.eugenio\source\repos\TCC\SSAS-AcidenteTransito\obj\Development\Model.deploymentoptions
+C:\Users\marcelo.eugenio\source\repos\TCC\SSAS-AcidenteTransito\obj\Development\Model.deploymenttargets

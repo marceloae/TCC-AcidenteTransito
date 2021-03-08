@@ -1,0 +1,649 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/5/2021 4:14:22 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:DTSID="{E55DC34D-1A02-497A-9FF5-FEED92738C5F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="PCT_CARGAGERAL"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{E7488C7A-15CF-4454-BE05-131B555FF326}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{24178740-877A-4EF9-9413-C37364C23DCA}"
+      DTS:ObjectName="localhost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=SSAS-AcidenteTransito;PROVIDER=MSOLAP;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga CSV"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contêiner da Sequência"
+      DTS:DTSID="{44C3213A-5442-4304-886C-A968114AA231}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga CSV">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Carga CSV\PCT_STG_SI_BOL_2017"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{7a97d8bb-9322-4987-ad64-eb5f3c5fc497}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_STG_SI_BOL_2017"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_STG_SI_BOL_2017.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga CSV\PCT_STG_SI_BOL_2018"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{cddd4e72-c8fd-483b-a8eb-f86bb1385374}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_STG_SI_BOL_2018"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_STG_SI_BOL_2018.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga CSV\PCT_STG_SI_BOL_2019"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{d8f2bc15-5d11-4dc9-8390-80b7b68ec3aa}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_STG_SI_BOL_2019"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_STG_SI_BOL_2019.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga CSV\PCT_STG_SI_ENV_2017"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{a3c02bc7-04ae-4429-b602-54d6ceb60a45}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_STG_SI_ENV_2017"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_STG_SI_ENV_2017.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga CSV\PCT_STG_SI_ENV_2018"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{e5b443d3-1d39-4d97-9f3d-36db0bc1d20f}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_STG_SI_ENV_2018"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_STG_SI_ENV_2018.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga CSV\PCT_STG_SI_ENV_2019"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{677e1308-6c61-4492-ad8f-9f441ff1c762}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_STG_SI_ENV_2019"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_STG_SI_ENV_2019.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Carga DWH - Dimensões"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contêiner da Sequência"
+      DTS:DTSID="{B4B5C404-227C-4C0D-B91F-EB5120457635}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga DWH - Dimensões">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DBOLETIM"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{196A160B-5D73-4FD7-AD79-6BF351C5D831}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DBOLETIM"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DBOLETIM.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DCATEGORIAHABILITACAO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{a51dcce5-f1b0-4cfd-a9fa-6e228428c603}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DCATEGORIAHABILITACAO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DCATEGORIAHABILITACAO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DCONDTEMPO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{3c5c3647-59f4-409e-b919-0fcab012f796}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DCONDTEMPO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DCONDTEMPO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DORIGEMBOLETIM"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{b488b41b-6fe7-49c1-99af-037499e486f3}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DORIGEMBOLETIM"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DORIGEMBOLETIM.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DPAVIMENTO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{e8004983-0b34-49e9-8a0e-959c6a82a749}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DPAVIMENTO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DPAVIMENTO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DREGIONAL"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{822a9ef1-e311-4ab5-8519-c9ffd500451e}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DREGIONAL"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DREGIONAL.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DSEVERIDADE"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{e3348d76-bb98-4976-a852-9276a457b298}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DSEVERIDADE"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DSEVERIDADE.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DTIPOACIDENTE"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{bf0ea62f-9501-4548-ae27-7e21aa8f61b7}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DTIPOACIDENTE"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DTIPOACIDENTE.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Dimensões\PCT_DWH_DTIPOVEICULO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{c4515655-a735-4ad9-a22d-5370c6effa75}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_DTIPOVEICULO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_DTIPOVEICULO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Carga DWH - Fato"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contêiner da Sequência"
+      DTS:DTSID="{B4628D97-DC32-45C7-A715-9AA9E1D02718}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga DWH - Fato">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Carga DWH - Fato\PCT_DWH_FACIDENTETRANSITO"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{F671FF6F-D609-4DD0-AC6D-675BF885594D}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_DWH_FACIDENTETRANSITO"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_DWH_FACIDENTETRANSITO.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Carga Stage Fatos"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contêiner da Sequência"
+      DTS:DTSID="{98CAECF2-E97C-4378-972A-2F9D8253B67E}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Stage Fatos">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Carga Stage Fatos\PCT_STG_BOL_AT"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{9AFAAAB4-6C46-41D9-ACAA-192011DB0FB2}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_STG_BOL_AT"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_STG_BOL_AT.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga Stage Fatos\PCT_STG_ENV_AT"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Tarefa Executar Pacote"
+          DTS:DTSID="{528464B0-D049-423F-940F-EFF13FDB633F}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="PCT_STG_ENV_AT"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>PCT_STG_ENV_AT.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Processamento do Analysis Services"
+      DTS:CreationName="Microsoft.DTSProcessingTask"
+      DTS:Description="Tarefa Processamento do Analysis Services"
+      DTS:DTSID="{0D16A50B-61FE-4714-8040-313F1B088011}"
+      DTS:ExecutableType="Microsoft.DTSProcessingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Processamento do Analysis Services"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASProcessingData
+          ConnectionName="localhost"
+          ProcessingCommands="{&#xA;  &quot;sequence&quot;: {&#xA;    &quot;operations&quot;: [&#xA;      {&#xA;        &quot;refresh&quot;: {&#xA;          &quot;type&quot;: &quot;full&quot;,&#xA;          &quot;objects&quot;: [&#xA;            {&#xA;              &quot;database&quot;: &quot;SSAS-AcidenteTransito&quot;&#xA;            }&#xA;          ]&#xA;        }&#xA;      }&#xA;    ]&#xA;  }&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição]"
+      DTS:CreationName=""
+      DTS:DTSID="{474F5185-6991-4173-A42D-99602F4A06B7}"
+      DTS:From="Package\Carga CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição"
+      DTS:To="Package\Carga Stage Fatos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{BC4F3286-C30F-4307-8152-FC990C7A756A}"
+      DTS:From="Package\Carga Stage Fatos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 1"
+      DTS:To="Package\Carga DWH - Dimensões" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{3C49D4BC-96B2-496A-8A56-F2873B0F041A}"
+      DTS:From="Package\Carga DWH - Dimensões"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 2"
+      DTS:To="Package\Carga DWH - Fato" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{82733B8C-502B-4D09-B7EC-8EE9DC965305}"
+      DTS:From="Package\Carga DWH - Fato"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 3"
+      DTS:To="Package\Tarefa Processamento do Analysis Services" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="193.333333333334,42.6666666666667"
+          Id="Package\Carga CSV\PCT_STG_SI_BOL_2017"
+          TopLeft="17.5000006332993,13.6333341624339" />
+        <NodeLayout
+          Size="193.333333333334,42.6666666666667"
+          Id="Package\Carga CSV\PCT_STG_SI_BOL_2018"
+          TopLeft="17.5000006332993,67.6666738728683" />
+        <NodeLayout
+          Size="193.333333333334,42.6666666666667"
+          Id="Package\Carga CSV\PCT_STG_SI_BOL_2019"
+          TopLeft="17.5000006332993,120.066674771707" />
+        <NodeLayout
+          Size="193.333333333334,42.6666666666667"
+          Id="Package\Carga CSV\PCT_STG_SI_ENV_2017"
+          TopLeft="239.583330657333,13.6333341624339" />
+        <NodeLayout
+          Size="193.333333333334,42.6666666666667"
+          Id="Package\Carga CSV\PCT_STG_SI_ENV_2018"
+          TopLeft="239.583330657333,67.6666738728683" />
+        <NodeLayout
+          Size="193.333333333334,42.6666666666667"
+          Id="Package\Carga CSV\PCT_STG_SI_ENV_2019"
+          TopLeft="239.583330657333,120.066674771707" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="650,222"
+          Size="650,42.6666666666667"
+          Id="Package\Carga CSV"
+          TopLeft="30.7499997702741,46.3666658375661" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DBOLETIM"
+          TopLeft="36.2499987147748,12.399996714592" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DCATEGORIAHABILITACAO"
+          TopLeft="36.2499987147748,84.94999725312" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DCONDTEMPO"
+          TopLeft="36.2499987147748,157.499997791648" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DORIGEMBOLETIM"
+          TopLeft="36.2499987147748,230.049998330176" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DPAVIMENTO"
+          TopLeft="36.2499987147748,302.599998868704" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DREGIONAL"
+          TopLeft="342.249997870376,11.9666633890073" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DSEVERIDADE"
+          TopLeft="342.249997870376,84.1555528228813" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DTIPOACIDENTE"
+          TopLeft="342.249997870376,156.344442256755" />
+        <NodeLayout
+          Size="276.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões\PCT_DWH_DTIPOVEICULO"
+          TopLeft="342.249997870376,228.533331690629" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="650,363.333333333334"
+          Size="650,42.6666666666667"
+          Id="Package\Carga DWH - Dimensões"
+          TopLeft="30.7499997702741,234.188885972831" />
+        <NodeLayout
+          Size="238.666666666667,42.6666666666667"
+          Id="Package\Carga DWH - Fato\PCT_DWH_FACIDENTETRANSITO"
+          TopLeft="35.5833291672171,13.5999969315529" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="650,110.666666666667"
+          Size="650,42.6666666666667"
+          Id="Package\Carga DWH - Fato"
+          TopLeft="30.7499997702741,328.099996040464" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Carga Stage Fatos\PCT_STG_BOL_AT"
+          TopLeft="32.0833251563213,11.0333315744003" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Carga Stage Fatos\PCT_STG_ENV_AT"
+          TopLeft="32.0833251563213,69.5333305283388" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="650,167.333333333334"
+          Size="650,42.6666666666667"
+          Id="Package\Carga Stage Fatos"
+          TopLeft="30.7499997702741,140.277775905199" />
+        <NodeLayout
+          Size="282.666666666667,42.6666666666667"
+          Id="Package\Tarefa Processamento do Analysis Services"
+          TopLeft="209.16666354984,422.666661862532" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição]"
+          TopLeft="355.749999770274,89.0333325042328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.2444434009658"
+              Start="0,0"
+              End="0,43.7444434009658">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.7444434009658" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 1]"
+          TopLeft="355.749999770274,182.944442571866">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.2444434009653"
+              Start="0,0"
+              End="0,43.7444434009653">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.7444434009653" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 2]"
+          TopLeft="355.749999770274,276.855552639498">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.2444434009664"
+              Start="0,0"
+              End="0,43.7444434009664">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.7444434009664" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 3]"
+          TopLeft="353.124998326724,370.766662707131">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.8999991554016"
+              Start="0,0"
+              End="0,44.3999991554016">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.3999991554016" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[localhost]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2021 10:19:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SOFT020-851"
+  DTS:CreatorName="NT\marcelo.eugenio"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{28AC2B1F-CBBF-4870-BA72-42B79D241F13}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="PCT_DWH_DLOGRADOURO"
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{CDA1FB67-5FBE-44CE-823D-486A25CF511E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.TCC_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{56E4ACB1-241E-44B4-A9B5-3A64615CD3F8}"
+      DTS:ObjectName="LocalHost.TCC_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TCC_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Dim DLOGRADOURO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{F1CFB6A6-802C-44B6-B794-A899EA629011}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Dim DLOGRADOURO"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{56E4ACB1-241E-44B4-A9B5-3A64615CD3F8}"
+          SQLTask:SqlStatementSource="merge dLogradouro Dim&#xA;&#xA;using&#xA;(&#xA;select&#xA;distinct&#xA;stg_log_at.nulogradouro as 'cdlogradouro',&#xA;stg_log_at.tplogradouro,&#xA;stg_log_at.nmlogradouro,&#xA;getdate() as 'dtcarga'&#xA;&#xA;from&#x9;tcc_stg.dbo.stg_log_at&#xA;&#xA;where&#x9;stg_log_at.nulogradouro not in ( 300744, 61270, 82738, 52722, 27938, 300024, 81256 )&#xA;) Query on ( Dim.cdlogradouro = Query.cdlogradouro )&#xA;&#xA;when&#x9;matched&#x9;then&#xA;&#x9;update&#xA;&#x9;set&#x9;Dim.cdlogradouro&#x9;= Query.cdlogradouro,&#xA;&#x9;&#x9;Dim.tplogradouro&#x9;= Query.tplogradouro,&#xA;&#x9;&#x9;Dim.nmlogradouro&#x9;= Query.nmlogradouro,&#xA;&#x9;&#x9;Dim.dtcarga&#x9;&#x9;= Query.dtcarga&#xA;&#xA;when&#x9;not matched by target then&#xA;&#x9;insert&#xA;&#x9;(&#xA;&#x9;cdlogradouro,&#xA;&#x9;tplogradouro,&#xA;&#x9;nmlogradouro,&#xA;&#x9;dtcarga&#xA;&#x9;)&#xA;&#x9;values&#xA;&#x9;(&#xA;&#x9;Query.cdlogradouro,&#xA;&#x9;Query.tplogradouro,&#xA;&#x9;Query.nmlogradouro,&#xA;&#x9;Query.dtcarga&#xA;&#x9;)&#xA;;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="208,42.6666666666667"
+          Id="Package\Carga Dim DLOGRADOURO"
+          TopLeft="31.3333329483867,29.3333329071602" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
